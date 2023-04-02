@@ -28,7 +28,7 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box id="nav-menu">
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -80,10 +80,11 @@ const Navbar = () => {
             fontSize={"md"}
             fontWeight={600}
             color={"white"}
+            rounded={"full"}
             bg={"#FF7A57"}
             href={"#"}
             _hover={{
-              bg: "gray.800",
+              bg: "gray.400",
             }}
           >
             Download Resume
@@ -254,20 +255,21 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Home",
-    href: "#",
+    href: "",
   },
   {
     label: "About",
+    href: "",
+  },
+  {
+    label: "Skills",
     href: "#",
   },
   {
     label: "Project",
     href: "#",
   },
-  {
-    label: "Skills",
-    href: "#",
-  },
+
   {
     label: "Contact",
     href: "#",
