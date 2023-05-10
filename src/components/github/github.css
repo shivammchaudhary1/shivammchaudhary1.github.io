@@ -1,0 +1,16 @@
+#github{
+    margin-top: 40rem;
+}
+
+.github_container{
+    gap: 2rem;
+    /* width: 30%; */
+    justify-content: center;
+    align-items: center;
+}
+.github_container img{
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
