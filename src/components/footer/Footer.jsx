@@ -16,9 +16,9 @@ export const Footer = () => {
         <li><a href="#contact">Contact</a> </li>
       </ul>
       <div className='footer_socials'>
-        <a href="https://www.linkedin.com/in/taniya-maurya/"><BsLinkedin/> </a>
-        <a href="mailto:taniyamaurya09@gmail.com"><AiTwotoneMail/> </a>
-        <a href="https://github.com/Taniya635"><AiOutlineGithub/> </a>
+        <a href="https://www.linkedin.com/in/shivammchaudhary/" target='_blank'><BsLinkedin/> </a>
+        <a href="mailto:shivamchaudhary75@gmail.com" target='_blank'><AiTwotoneMail/> </a>
+        <a href="https://github.com/shivammchaudhary1" target='_blank'><AiOutlineGithub/> </a>
       </div>
     </footer>
   )

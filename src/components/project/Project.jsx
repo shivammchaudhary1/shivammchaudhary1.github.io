@@ -15,24 +15,22 @@ export const Project = () => {
           <div className="portfolio_item-img">
             <img src={expedia} alt="expedia" />
           </div>
-          <h3 class="project-title">Clone of Hotstar</h3>
+          <h3 class="project-title">Clone of MakeMyTrip</h3>
           <p class="project-description">
             {" "}
-            The objective is to develop a replica of the Hotstar movie app
-            utilizing HTML, CSS, and JavaScript technology to create a visually
-            appealing and functional interface.{" "}
+            The project is a clone of the MakeMyTrip website, which is a popular travel booking platform. The team's objective was to showcase their proficiency in various web development technologies, including HTML, CSS, JavaScript, React, Redux, and Json-Server.{" "}
           </p>
-          <h2 class="project-tech-stack">React</h2>
+          <p class="project-tech-stack"> <h4>Tech Stacks:</h4> HTML | CSS | JS | React | Redux | JSON server | firebase</p>
           <div className="portfolio_item-cta">
             <a
-              href="https://github.com/shivammchaudhary1/movie-app-clone"
+              href="https://github.com/shivammchaudhary1/trip-to-heaven"
               target="_blank"
               class="project-github-link"
             >
               GitHub
             </a>
             <a
-              href="https://hotstar-movie-app-clone.netlify.app/"
+              href="https://hesitant-river-6235-nine.vercel.app/"
               target="_blank"
               class="project-deployed-link"
             >
@@ -52,7 +50,7 @@ export const Project = () => {
             This will involve creating a dynamic and visually appealing user
             interface to enhance the overall user experience.
           </p>
-          <h2 class="project-tech-stack">React</h2>
+          <p class="project-tech-stack"> <h4>Tech Stacks:</h4>HTML | CSS | JS | React | Chakra UI | Axios | React router | React caraosel </p>
           <div className="portfolio_item-cta">
             <a
               href="https://github.com/shivammchaudhary1/rampant-quiet-9349"
@@ -82,7 +80,7 @@ export const Project = () => {
             be a replica of SkinStore.com and was successfully completed within
             a five-day timeframe.
           </p>
-          <h2 class="project-tech-stack">React</h2>
+          <p class="project-tech-stack"><h4>Tech Stacks:</h4> HTML | CSS | JavaScript | Bootstrap</p>
           <div className="portfolio_item-cta">
             <a
               href="https://github.com/shahabhi095/SkinStore.com"
@@ -110,7 +108,7 @@ export const Project = () => {
             Create a replicative design of the popular video-sharing platform,
             YouTube, utilizing HTML, CSS &JavaScript as the primary technologies
           </p>
-          <h2 class="project-tech-stack">React</h2>
+          <p class="project-tech-stack"><h4>Tech Stacks:</h4>HTML | CSS | JavaScript</p>
           <div className="portfolio_item-cta">
             <a
               href="https://github.com/shivammchaudhary1/youtube-clone"

@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import me from '../../assets/image1.png'
+import resume from '../../assets/Shivam_Chaudhary_Resume.pdf'
 
 export const About = () => {
   return (
@@ -19,10 +20,15 @@ export const About = () => {
           <br />
           <br />
           <br />
-          <a href="#contact" className='btn btn-primary'>Let's connect</a>
+          
           </p>
+          <div className='connect'>
+          <a href="#contact" className='btn btn-primary'>Let's connect</a>
+          <button><a href={resume} download  target='_blank' id="resume-button-1">Resume</a></button>
+          </div>
           
       </div>
+      
 
     </section>
   )

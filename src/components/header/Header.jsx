@@ -9,9 +9,9 @@ export const Header = () => {
     <div id="home">
       <header>
         <div className="container header__container">
-          <h5>Hello, I'm</h5>
+          <h3>Hello, I'm</h3>
           <h1 id="user-detail-name">Shivam Kumar Chaudhary</h1>
-          <h5 className=".text-light">Full Stack Web Developer</h5>
+          <h4 className=".text-light">Full Stack Web Developer</h4>
           <CTA />
           <HeaderSocial />
           <div>

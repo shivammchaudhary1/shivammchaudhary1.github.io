@@ -12,7 +12,9 @@
     transition: var(--transition);
 
 }
-
+.project-card img{
+    border-radius: 1rem;
+}
 .project-card:hover{
     border-color: var(--color-primary-variant);
     background: transparent;
@@ -29,9 +31,29 @@
 
 .project-card-cta{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 1rem;
-
+    
+}
+.project-card .project-github-link{
+    background-color: var(--color-primary);
+    color: black;
+}
+.project-card .project-github-link:hover{
+   background: var(--color-bg);
+   color: white;
+   border: 1px solid var(--color-primary);
+    
+}
+.project-card  .project-deployed-link{
+    border: 1px solid var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    margin-left: 0.5rem;
+}
+.project-card  .project-deployed-link:hover{
+    background: var(--color-bg);
+    color: var(--color-light);
 }
 
 
@@ -39,7 +61,7 @@
 /* ================================ medium screen ============================= */
 
 @media screen and (max-width:1024px) {
-   section{
+   #projects{
         margin-top: 30rem;
     }
     .portfolio_container{
@@ -53,7 +75,7 @@
 
 @media screen and (max-width:600px) {
     #projects{
-        margin-top: 38rem;
+        margin-top: 30rem;
     }
     .portfolio_container{
         grid-template-columns: 1fr;

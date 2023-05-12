@@ -1,3 +1,6 @@
+#skills{
+    margin-top: -5rem;
+}
 .experience_container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,7 +55,7 @@
 
 @media screen and (max-width:1024px) {
     #skills{
-        margin-top: 25rem;
+        margin-top: 10rem;
     }
     .experience_container{
         grid-template-columns: 1fr;
@@ -71,6 +74,9 @@
 /* ================================== small screen ============================ */
 
 @media screen and (max-width:600px) {
+    #skills{
+        margin-top: 5rem;
+    }
 
     .experience_container{
         gap: 2rem;

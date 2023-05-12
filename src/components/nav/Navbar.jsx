@@ -5,6 +5,9 @@ import { MdContactPage } from "react-icons/md";
 import { SiBookstack } from "react-icons/si";
 import { BsStack } from "react-icons/bs";
 import { RiMessage2Fill } from "react-icons/ri";
+import {ImFolderDownload} from 'react-icons/im'
+import resume from '../../assets/Shivam_Chaudhary_Resume.pdf'
+
 
 export const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#");
@@ -17,17 +20,20 @@ export const Navbar = () => {
         className={activeNav === "#" ? "active" : ""}
         class="nav-link home"
       >
-        {" "}
-        <HiHome />{" "}
+      
+        
+        <HiHome />
+          
       </a>
+      
       <a
         href="#about"
         onClick={() => setActiveNav("#about")}
         className={activeNav === "#about" ? "active" : ""}
         class="nav-link about"
       >
-        {" "}
-        <MdContactPage />{" "}
+      
+        <MdContactPage />
       </a>
       <a
         href="#skills"
@@ -35,8 +41,8 @@ export const Navbar = () => {
         className={activeNav === "#skills" ? "active" : ""}
         class="nav-link skills"
       >
-        {" "}
-        <SiBookstack />{" "}
+      
+        <SiBookstack />
       </a>
       <a
         href="#projects"
@@ -44,8 +50,8 @@ export const Navbar = () => {
         className={activeNav === "#projects" ? "active" : ""}
         class="nav-link projects"
       >
-        {" "}
-        <BsStack />{" "}
+      
+        <BsStack />
       </a>
       <a
         href="#contact"
@@ -53,9 +59,18 @@ export const Navbar = () => {
         className={activeNav === "#contact" ? "active" : ""}
         class="nav-link contact"
       >
-        {" "}
-        <RiMessage2Fill />{" "}
+      
+        <RiMessage2Fill />
       </a>
+
+      <a href={resume}
+        download
+        target="_blank"
+      >
+       
+        <ImFolderDownload/> 
+       </a> 
+     
     </nav>
   );
 };
