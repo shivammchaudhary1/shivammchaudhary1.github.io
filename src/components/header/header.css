@@ -1,14 +1,14 @@
-header{
-    height: 100vh;
-    padding-top: 7rem;
-    overflow: hidden;
-
+header {
+  height: 100vh;
+  /* padding-top: 7rem; */
+  margin-top: 3%;
+  overflow: hidden;
 }
 
-.header__container{
-    text-align: center;
-    height: 100%;
-    position: relative;
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
 }
 
 /* button{
@@ -32,89 +32,97 @@ button #resume-button-1{
     font-size: 20px;
 } */
 
-
-
 /* ======================================= CTA ========================================== */
-.cta{
-    margin-top: 2.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.3rem;
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
 }
 
-.btn-primary{
-    border-radius: 0.4rem;
-    text-align: center;
-    padding-top: 0.5rem;
+/* .btn-primary {
+  border-radius: 0.4rem;
+  text-align: center;
 
+  padding-top: 0.5rem;
 }
-.btn-primary:hover{
-    cursor: pointer;
-    background: var(--color-primary);
-} 
+.btn-primary:hover {
+  cursor: pointer;
+  background: var(--color-primary);
+} */
 
-button a{
-    overflow: hidden;
-    color: black;
-    font-size: 20px;
+.btn-primary {
+  border-radius: 0.4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.6rem;
 }
-button a:hover{
-    overflow: hidden;
-    font-size: 20px;
+.btn-primary:hover {
+  cursor: pointer;
+  background: var(--color-primary);
+}
+
+a button {
+  overflow: hidden;
+  color: black;
+  font-size: 20px;
+}
+a button:hover {
+  overflow: hidden;
+  font-size: 20px;
+  color: white;
+  border: 1px solid white;
 }
 
 /* ====================================== Header socials ================================== */
 
-.header__social{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    position: absolute;
-    left: 0;
-    bottom: 3rem;
+.header__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  top: 25rem;
+  bottom: 3rem;
 }
 
-.header__social::after{
-    content: "";
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary);
-    color: black;
+.header__social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+  color: black;
 }
 
 /* ==================================== home-img ================================================ */
 
-.home-img{
-    background: var(--color-primary);
-    width: 22rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
-
+.home-img {
+  background: var(--color-primary);
+  width: 22rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
 }
 
 /* =========================== scroll down ======================================= */
 
-
-
 /* ================================= medium screen ==================================*/
 
-@media screen and (max-width:1024px) {
-    header{
-        height: 100vh;
-
-    }
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
 }
 
 /* ================================= small screen ==================================*/
 
-@media screen and (max-width:600px) {
-    header{
-        height: 100vh;
-    }
-   
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
 }

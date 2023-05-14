@@ -4,6 +4,10 @@
   margin-top: 60%;
 }
 
+#github h2 {
+  font-size: xx-large;
+}
+
 .github_container {
   gap: 2rem;
   display: grid;

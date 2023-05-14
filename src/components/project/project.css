@@ -1,84 +1,85 @@
-.portfolio_container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-
-}
-.project-card{
-    background: var(--color-bg-variant);
-    padding:1.2rem ;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-
-}
-.project-card img{
-    border-radius: 1rem;
-}
-.project-card:hover{
-    border-color: var(--color-primary-variant);
-    background: transparent;
+#projects {
+  margin-top: 4rem;
 }
 
-.project-card-img{
-    border-radius: 1.5rem;
-    overflow: hidden;
-
-}
-.project-card h3,p{
-    margin: 1.2rem 0 2rem;
+#projects h2 {
+  font-size: xx-large;
 }
 
-.project-card-cta{
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 1rem;
-    
+.portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
-.project-card .project-github-link{
-    background-color: var(--color-primary);
-    color: black;
+.project-card {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
 }
-.project-card .project-github-link:hover{
-   background: var(--color-bg);
-   color: white;
-   border: 1px solid var(--color-primary);
-    
+.project-card img {
+  border-radius: 1rem;
 }
-.project-card  .project-deployed-link{
-    border: 1px solid var(--color-primary);
-    padding: 0.7rem;
-    border-radius: 0.4rem;
-    margin-left: 0.5rem;
-}
-.project-card  .project-deployed-link:hover{
-    background: var(--color-bg);
-    color: var(--color-light);
+.project-card:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
 }
 
+.project-card-img {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.project-card h3,
+p {
+  margin: 1.2rem 0 2rem;
+}
 
+.project-card-cta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.project-card .project-github-link {
+  background-color: var(--color-primary);
+  color: black;
+}
+.project-card .project-github-link:hover {
+  background: var(--color-bg);
+  color: white;
+  border: 1px solid var(--color-primary);
+}
+.project-card .project-deployed-link {
+  border: 1px solid var(--color-primary);
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+  margin-left: 0.5rem;
+}
+.project-card .project-deployed-link:hover {
+  background: var(--color-bg);
+  color: var(--color-light);
+}
 
 /* ================================ medium screen ============================= */
 
-@media screen and (max-width:1024px) {
-   #projects{
-        margin-top: 30rem;
-    }
-    .portfolio_container{
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-
-    }
+@media screen and (max-width: 1024px) {
+  #projects {
+    margin-top: 30rem;
+  }
+  .portfolio_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
 }
 
 /* ================================ small screen ============================= */
 
-@media screen and (max-width:600px) {
-    #projects{
-        margin-top: 30rem;
-    }
-    .portfolio_container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+@media screen and (max-width: 600px) {
+  #projects {
+    margin-top: 30rem;
+  }
+  .portfolio_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }

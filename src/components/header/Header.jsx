@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { CTA } from "./CTA";
-import shivam from "../../assets/about.jpg";
+import ShivamImage from "../../assets/Shivam_Chaudhary.jpg";
 import { HeaderSocial } from "./HeaderSocial";
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
           <CTA />
           <HeaderSocial />
           <div>
-            <img class="home-img" src={shivam} alt="shivam" />
+            <img class="home-img" src={ShivamImage} alt="shivam" />
           </div>
         </div>
       </header>
