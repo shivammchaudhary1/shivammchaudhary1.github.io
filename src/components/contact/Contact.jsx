@@ -30,7 +30,7 @@ const Contact = () => {
     alert("Message Sent Successfully");
   };
   return (
-    <div className="contact_container">
+    <div className="contact_container" id="contact">
       <h4>Get in touch</h4>
       <h1>Contact Me</h1>
       <div className="contact_container_devided">

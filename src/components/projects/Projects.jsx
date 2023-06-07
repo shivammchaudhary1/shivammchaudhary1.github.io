@@ -98,7 +98,7 @@ let ProjectsDetails = [
 
 const Projects = () => {
   return (
-    <div className="project_container">
+    <div className="project_container" id="projects">
       <h1>Projects</h1>
       <div className="project_sub-container">
         {ProjectsDetails.map((e) => (

@@ -3,7 +3,7 @@ import "./Github.css";
 
 const Github = () => {
   return (
-    <div className="github_container">
+    <div className="github_container" id="github">
       <h1>Github Stats</h1>
       <div className="github_single_stats_container">
         <div className="github_single_stats">

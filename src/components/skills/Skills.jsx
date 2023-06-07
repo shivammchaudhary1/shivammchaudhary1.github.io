@@ -21,7 +21,7 @@ import {
 
 const Skills = () => {
   return (
-    <div className="skills_container">
+    <div className="skills_container" id="skills">
       <h1> What skills I have?</h1>
       {/* frontend and backend container  */}
       <div className="skills_core_continer">
