@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f02c03e.css",
-    "main.js": "/static/js/main.fabcd4fd.js",
+    "main.css": "/static/css/main.ab564bdd.css",
+    "main.js": "/static/js/main.19f24069.js",
     "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
     "static/media/flawless_Image (1).png": "/static/media/flawless_Image (1).0fa108035628138cb971.png",
     "static/media/aboutMePic.jpg": "/static/media/aboutMePic.8155e10e661920a86eaf.jpg",
@@ -21,11 +21,11 @@
     "static/media/flawless_Image (4).png": "/static/media/flawless_Image (4).2f93ca9e8d2253b7dc06.png",
     "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
-    "main.9f02c03e.css.map": "/static/css/main.9f02c03e.css.map",
-    "main.fabcd4fd.js.map": "/static/js/main.fabcd4fd.js.map"
+    "main.ab564bdd.css.map": "/static/css/main.ab564bdd.css.map",
+    "main.19f24069.js.map": "/static/js/main.19f24069.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f02c03e.css",
-    "static/js/main.fabcd4fd.js"
+    "static/css/main.ab564bdd.css",
+    "static/js/main.19f24069.js"
   ]
 }
