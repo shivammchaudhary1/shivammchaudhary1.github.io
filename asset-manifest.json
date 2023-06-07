@@ -1,20 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d23111e.css",
-    "main.js": "/static/js/main.185c8fd0.js",
-    "static/media/bmi.png": "/static/media/bmi.043da8898df618ddf50c.png",
-    "static/media/dsw.png": "/static/media/dsw.db9c2452b9417463233e.png",
-    "static/media/limeroad.png": "/static/media/limeroad.e8c3f12644c0dbc931e4.png",
-    "static/media/expedia.png": "/static/media/expedia.3fecb0d19de581923e4d.png",
+    "main.css": "/static/css/main.9f02c03e.css",
+    "main.js": "/static/js/main.4531c3e8.js",
+    "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
+    "static/media/flawless_Image (1).png": "/static/media/flawless_Image (1).0fa108035628138cb971.png",
+    "static/media/aboutMePic.jpg": "/static/media/aboutMePic.8155e10e661920a86eaf.jpg",
+    "static/media/skinCare (1).png": "/static/media/skinCare (1).921f8ac586f48bfb50ae.png",
+    "static/media/tripToHeaven (2).png": "/static/media/tripToHeaven (2).929770418caeaa7ccd93.png",
+    "static/media/tripToHeaven (3).png": "/static/media/tripToHeaven (3).7cd6bd62cf4b4ff7e336.png",
     "static/media/Shivam_Chaudhary_Resume.pdf": "/static/media/Shivam_Chaudhary_Resume.434daa3cffe3fa9933d7.pdf",
+    "static/media/skinCare (2).png": "/static/media/skinCare (2).e838b7c7e188c3985cad.png",
+    "static/media/skinCare (3).png": "/static/media/skinCare (3).94c3ad53214a2d3bf863.png",
+    "static/media/skinCare (4).png": "/static/media/skinCare (4).0b56699ae7ffac9ac254.png",
+    "static/media/flawless_Image (3).png": "/static/media/flawless_Image (3).e296416db0c345954a56.png",
+    "static/media/flawless_Image (2).png": "/static/media/flawless_Image (2).9435ccc9b3ffa0cba815.png",
+    "static/media/tripToHeaven (1).png": "/static/media/tripToHeaven (1).77acc5be54f04a3685ea.png",
+    "static/media/flawless_Image (5).png": "/static/media/flawless_Image (5).00656b24bb92ae13969c.png",
     "static/media/Shivam_Chaudhary.jpg": "/static/media/Shivam_Chaudhary.d4880e1c70aade38075a.jpg",
-    "static/media/image1.jpg": "/static/media/image1.6a97528c36d1cb3e667f.jpg",
+    "static/media/skinCare (5).png": "/static/media/skinCare (5).e4ce986216b4016a91fa.png",
+    "static/media/flawless_Image (4).png": "/static/media/flawless_Image (4).2f93ca9e8d2253b7dc06.png",
+    "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
-    "main.4d23111e.css.map": "/static/css/main.4d23111e.css.map",
-    "main.185c8fd0.js.map": "/static/js/main.185c8fd0.js.map"
+    "main.9f02c03e.css.map": "/static/css/main.9f02c03e.css.map",
+    "main.4531c3e8.js.map": "/static/js/main.4531c3e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d23111e.css",
-    "static/js/main.185c8fd0.js"
+    "static/css/main.9f02c03e.css",
+    "static/js/main.4531c3e8.js"
   ]
 }
