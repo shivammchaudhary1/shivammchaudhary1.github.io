@@ -1,139 +1,151 @@
-import React from 'react'
-import './skills.css';
-import {AiFillHtml5} from 'react-icons/ai'
-import {DiCss3,DiJava,DiMongodb} from 'react-icons/di'
-import {RiReactjsLine} from 'react-icons/ri'
-import {IoLogoNodejs} from 'react-icons/io'
-import {TbBrandMysql,TbBrandPython,TbBrandTypescript} from 'react-icons/tb'
-import {BsGithub} from 'react-icons/bs'
-import {SiNetlify,SiChakraui,SiVercel,SiExpress} from 'react-icons/si'
-import {VscJson} from 'react-icons/vsc'
+import "./Skills.css";
+import { VscJson } from "react-icons/vsc";
+import { TbBrandVscode } from "react-icons/tb";
+import { FaCss3Alt, FaHtml5, FaJsSquare, FaReact } from "react-icons/fa";
+import {
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiNpm,
+  SiVercel,
+  SiNetlify,
+  SiGithub,
+  SiPostman,
+  SiFirebase,
+  SiAdobephotoshop,
+  SiTypescript,
+  SiRedux,
+  SiChakraui,
+} from "react-icons/si";
 
-
-
-export const Skills = () => {
+const Skills = () => {
   return (
-    <section id='skills'>
-      <h2>What skills I have?</h2>
-      <div className='container experience_container'>
-        <div className='experience_frontend'>
-            <h2>Frontend Development</h2>
-            <div className='experience_content'>
-              <article className='skills-card' >
-                <AiFillHtml5 className='skills-card-img' />
-                <div>
-                <h3 class="skills-card-name">HTML</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <DiCss3 className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">CSS</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <DiJava className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">JavaScript</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <RiReactjsLine className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">React </h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <RiReactjsLine className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">React Redux</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <SiChakraui className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Chakra UI</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <BsGithub className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">GitHub</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <SiNetlify className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Netlify</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <SiVercel className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Vercel</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <VscJson className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">JSON server</h3>
-                </div>
-              </article>
+    <div className="skills_container">
+      <h1> What skills I have?</h1>
+      {/* frontend and backend container  */}
+      <div className="skills_core_continer">
+        {/* forntend container  */}
+        <div className="skills_frontend">
+          <h3>Frontend Development</h3>
+
+          <div className="skills_icons">
+            <div>
+              <FaHtml5 size={40} />
+              <p>HTML</p>
             </div>
+            {/*  */}
+            <div>
+              <FaCss3Alt size={40} />
+              <p>CSS</p>
+            </div>
+            {/*  */}
+            <div>
+              <FaJsSquare size={40} />
+              <p>JavaScript</p>
+            </div>
+            {/*  */}
+            <div>
+              <FaReact size={40} />
+              <p>React</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiRedux size={40} />
+              <p>Redux</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiTypescript size={40} />
+              <p>TypeScript</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiChakraui size={40} />
+              <p>Chakra UI</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiBootstrap size={40} />
+              <p>Bootstrap</p>
+            </div>
+            <div>
+              <SiAdobephotoshop size={40} />
+              <p>Photoshop</p>
+            </div>
+          </div>
         </div>
-        <div className='experience_backend'>
-          <h2>Backend Development</h2>
-          <div className='experience_content'>
-              <article className='skills-card'>
-                <IoLogoNodejs className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Node js</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <SiExpress className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Express</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <TbBrandPython className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Python</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <TbBrandTypescript className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">TypeScript</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <DiMongodb className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">MongoDB</h3>
-                </div>
-              </article>
-              <article className='skills-card'>
-                <DiMongodb className='skills-card-img'/>
-                <div>
-                <h3 class="skills-card-name">Mongoose</h3>
-                </div>
-              </article>
+        {/* backend container  */}
+        <div className="skills_backend">
+          <h3>Backend Development</h3>
+          <div className="skills_icons">
+            <div>
+              <SiNodedotjs size={40} />
+              <p>Node Js</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiExpress size={40} />
+              <p>express Js</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiMongodb size={40} />
+              <p>MongoDB</p>
+            </div>
+            {/*  */}
+            <div>
+              <VscJson size={40} />
+              <p>JSON</p>
+            </div>
+            {/*  */}
+            <div>
+              <SiNpm size={40} />
+              <p>NPM</p>
+            </div>
+            <div>
+              <SiFirebase size={40} />
+              <p>Firebase</p>
             </div>
 
+            {/*  */}
+          </div>
         </div>
-
-        {/* <div className='experience_tools'>
-          <h2>Tools</h2>
-          <div className='experience_content'>
-              
-              
-            </div>
-
-        </div> */}
-
       </div>
-    </section>
-  )
-}
+      {/* frontend and backend container  */}
+
+      <div className="skills_tools_container">
+        <h3>Tools</h3>
+        <div className="skills_icons">
+          <div>
+            <SiVercel size={40} />
+            <p>Vercel</p>
+          </div>
+          {/*  */}
+          <div>
+            <SiNetlify size={40} />
+            <p>Netlify</p>
+          </div>
+          {/*  */}
+          <div>
+            <SiGithub size={40} />
+            <p>Github</p>
+          </div>
+          {/*  */}
+          <div>
+            <SiPostman size={40} />
+            <p>Postman</p>
+          </div>
+          {/*  */}
+          <div>
+            <TbBrandVscode size={40} />
+            <p>VS Code</p>
+          </div>
+          {/*  */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Skills;

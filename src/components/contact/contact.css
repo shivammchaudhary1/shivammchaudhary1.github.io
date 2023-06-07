@@ -1,54 +1,68 @@
-#contact {
-  margin-top: 15%;
-}
-#contact > h2 {
-  font-size: xx-large;
-}
-
-#contact > h5 {
-  font-size: medium;
-  margin-bottom: -1%;
+.contact_container {
+  width: 75%;
+  margin: auto;
+  /* border: 1px solid white; */
 }
 
-.container.contact_container {
-  width: 58%;
-  display: grid;
-  grid-template-columns: 30% 58%;
-  gap: 12%;
+.contact_container > h1 {
+  margin-top: -0.7rem;
 }
-
-.contact-options {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact-option {
-  background: var(--color-bg-variant);
-  padding: 1.2rem;
-  border-radius: 1.2rem;
+.contact_container > h4 {
   text-align: center;
-  border: 1px solid transparent;
-  transition: var(--transition);
+  padding-top: 2rem;
 }
 
-.contact-option:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
+.contact_container_devided {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 3rem;
 }
 
-.icons {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.contact_email_whatsaap {
+  /* border: 1px solid orange; */
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10;
 }
 
-.contact-option a {
-  margin-top: 0.7rem;
-  display: inline-block;
-  font-size: 0.8rem;
+.email_whatsaap {
+  /* border: 1px solid green; */
+  text-align: center;
+  background-color: #2c2c6c;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
 }
 
-/* ============================ Form ===================================== */
+.email_whatsaap:hover {
+  background-color: transparent;
+  transition: all 400ms ease;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.heading > h4 {
+  font-size: larger;
+}
+
+a {
+  text-decoration: none;
+  color: #4db5ff;
+}
+
+.contact_form {
+  /* border: 1px solid pink; */
+  width: 65%;
+}
 
 form {
   display: flex;
@@ -58,38 +72,136 @@ form {
 
 input,
 textarea {
-  width: 100%;
+  width: 70%;
+  margin: auto;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background: transparent;
-  border: 2px solid var(--color-primary-variant);
+  border: 2px solid rgba(77, 181, 255, 0.4);
   resize: none;
-  color: var(--color-white);
-}
-.btn-primary {
-  font-size: 15px;
-  padding-bottom: 0.3rem;
-}
-.btn-primary:hover {
-  background: var(--color-bg);
   color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 400ms ease;
 }
 
-/* ============================== medium screen ===============================*/
-@media screen and (max-width: 1024px) {
-  .container.contact_container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+textarea:hover,
+input:hover {
+  transform: scale(1.1);
 }
 
-/* ============================== medium screen ===============================*/
-@media screen and (max-width: 600px) {
-  #contact {
-    margin-top: 40rem;
+.send_button {
+  height: 50px;
+  width: 150px;
+  background-color: #4db5ff;
+  color: #2c2c6c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 17px;
+  margin: auto;
+  /* font-weight: 600; */
+}
+
+.send_button:hover {
+  color: #fff;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .contact_container {
+    width: 90%;
+    margin-top: -1rem;
   }
-  .container.contact_container {
-    width: var(--container-width-sm);
-    padding-bottom: 15rem;
+
+  .contact_container > h1 {
+    margin-top: -0.7rem;
+  }
+  .contact_container > h4 {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .contact_container_devided {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .contact_email_whatsaap {
+    width: 100%;
+  }
+
+  .contact_form {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+  }
+
+  textarea:hover,
+  input:hover {
+    transform: scale(1.1);
+  }
+
+  .send_button {
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .contact_container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .contact_container > h1 {
+    margin-top: -0.7rem;
+  }
+  .contact_container > h4 {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .contact_container_devided {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .contact_email_whatsaap {
+    width: 100%;
+  }
+
+  .contact_form {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+  }
+
+  textarea:hover,
+  input:hover {
+    transform: scale(1.1);
+  }
+
+  .send_button {
+    font-weight: 600;
   }
 }

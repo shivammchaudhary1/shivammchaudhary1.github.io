@@ -1,34 +1,55 @@
-#github {
-  /* margin-top: 60rem; */
-
-  margin-top: 60%;
-}
-
-#github h2 {
-  font-size: xx-large;
-}
-
 .github_container {
-  gap: 2rem;
+  /* border: 1px solid white; */
+  width: 75%;
+  margin: 2rem auto 2rem auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+}
+
+.github_single_stats_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+  gap: 3rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.github_container > div {
-  width: 400px;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  /* border: 1px solid red; */
-  border-radius: 0.5rem;
+.github_single_stats {
+  /* border: 1px dashed yellow; */
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+}
+.github_single_stats:hover {
+  transform: scale(1.1);
 }
 
-@media screen and (max-width: 600px) {
-  #github {
-    margin-top: 130rem;
-  }
+.github_calender_div {
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+}
+.github_calender_div:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
   .github_container {
+    /* border: 1px solid white; */
+    width: 90%;
+    margin: 2rem auto 2rem auto;
+  }
+  .github_single_stats_container {
     grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .github_container {
+    width: 90%;
   }
 }

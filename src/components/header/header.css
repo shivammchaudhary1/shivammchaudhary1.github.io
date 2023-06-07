@@ -1,128 +1,186 @@
-header {
-  height: 100vh;
-  /* padding-top: 7rem; */
-  margin-top: 3%;
-  overflow: hidden;
-}
-
-.header__container {
+.header-container {
+  /* border: 1px solid white; */
+  width: 75%;
+  margin: auto;
   text-align: center;
-  height: 100%;
-  position: relative;
+  margin-top: 6rem;
 }
 
-/* button{
-    background-color: var(--color-primary);
-    color:  black;
-    width: 150px;
-    height: 50px;
-    border-radius: 0.4rem;
-    margin-left:40rem ;
-    margin-bottom: -30rem;
-    
-    
-}
-button:hover{
-    cursor: pointer;
-    transition: var(--transition);
-    background-color: var(--color-bg);
-}
-button #resume-button-1{
-    color: black;
-    font-size: 20px;
-} */
-
-/* ======================================= CTA ========================================== */
-.cta {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.3rem;
-}
-
-/* .btn-primary {
-  border-radius: 0.4rem;
-  text-align: center;
-
-  padding-top: 0.5rem;
-}
-.btn-primary:hover {
-  cursor: pointer;
-  background: var(--color-primary);
-} */
-
-.btn-primary {
-  border-radius: 0.4rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding-top: 0.6rem;
-}
-.btn-primary:hover {
-  cursor: pointer;
-  background: var(--color-primary);
-}
-
-a button {
-  overflow: hidden;
-  color: black;
+.header-hello {
   font-size: 20px;
 }
-a button:hover {
-  overflow: hidden;
-  font-size: 20px;
-  color: white;
-  border: 1px solid white;
+
+.header-name {
+  font-size: 40px;
+  margin-top: -1.5rem;
 }
 
-/* ====================================== Header socials ================================== */
+.header-designation {
+  font-size: 25px;
+  margin-top: -1.5rem;
+}
 
-.header__social {
+.header-button-container {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-button-one {
+  height: 50px;
+  width: 150px;
+  background-color: #4db5ff;
+  color: #2c2c6c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.primary-button-one:hover {
+  color: #fff;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+
+.primary-button-two {
+  height: 50px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  color: #fff;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.primary-button-two:hover {
+  background-color: #4db5ff;
+  color: #2c2c6c;
+  transition: all 400ms ease;
+}
+
+.social-links-container {
+  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 1rem;
   position: absolute;
-  left: 0;
   top: 25rem;
   bottom: 3rem;
 }
 
-.header__social::after {
-  content: "";
-  width: 1px;
-  height: 2rem;
-  background: var(--color-primary);
-  color: black;
+.social-links-container > a {
+  color: #4db5ff;
 }
 
-/* ==================================== home-img ================================================ */
+.social-links-container > a:hover {
+  color: white;
+}
 
-.home-img {
-  background: var(--color-primary);
+.header-profile-image {
+  background: #052232;
   width: 22rem;
-  position: absolute;
   left: calc(50% - 11rem);
   margin-top: 4rem;
   border-radius: 2rem;
-  overflow: hidden;
-  /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
 }
 
-/* =========================== scroll down ======================================= */
+/* Media Queries */
 
-/* ================================= medium screen ==================================*/
+@media screen and (max-width: 800px) {
+  .header-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 6rem;
+  }
 
-@media screen and (max-width: 1024px) {
-  header {
-    height: 100vh;
+  .header-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-links-container {
+    border: 0px solid white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
   }
 }
 
-/* ================================= small screen ==================================*/
+/* Small Screen  */
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .header-name {
+    font-size: 30px; /* Adjust the font size for small screens */
+    line-height: 120%;
+  }
 
-@media screen and (max-width: 600px) {
-  header {
-    height: 100vh;
+  .header-designation {
+    font-size: 20px; /* Adjust the font size for small screens */
+  }
+
+  .header-hello {
+    font-size: 15px; /* Adjust the font size for small screens */
+  }
+
+  .header-profile-image {
+    width: 16rem; /* Adjust the image width for small screens */
+    margin-top: 1rem; /* Adjust the margin-top for small screens */
+    /* box-shadow: rgba(247, 242, 242, 0.1) 0px 1px 2px 0px; */
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
+      rgba(250, 250, 250, 0.3) 0px 1px 3px -1px;
+  }
+
+  .social-links-container {
+    /* border: 1px solid white; */
+    top: 21rem;
+
+    display: flex;
+    flex-direction: row; /* Display social links horizontally */
+    justify-content: center; /* Center the social links horizontally */
+    align-items: center; /* Center the social links vertically */
+    position: relative;
+    bottom: 1rem; /* Adjust the bottom position */
+  }
+
+  .social-links-container > a {
+    margin: 0 0.5rem; /* Adjust the margin between social links */
+  }
+}
+
+/* Tablet  */
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  /* Update styles for tablet here */
+  .header-profile-image {
+    width: 18rem; /* Adjust the image width for medium screens */
+    margin-top: 4rem; /* Adjust the margin-top for medium screens */
+  }
+
+  .social-links-container {
+    flex-direction: row; /* Display social links horizontally */
+    top: unset; /* Remove the top position */
+    bottom: 5rem; /* Adjust the bottom position */
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
+      rgba(250, 250, 250, 0.3) 0px 1px 3px -1px;
+  }
+
+  .social-links-container > a {
+    margin: 0 0.5rem; /* Adjust the margin between social links */
+  }
+
+  .header-container {
+    width: 90%;
   }
 }

@@ -1,0 +1,125 @@
+.aboutme_container {
+  /* border: 1px solid white; */
+  width: 75%;
+  /* width: 100vh; */
+  margin: auto;
+  margin-top: 5rem;
+  position: static;
+  text-align: center;
+}
+
+.aboutme_container > h1 {
+  padding-bottom: 2rem;
+  margin-top: -0.7rem;
+}
+
+.aboutme_container > h4 {
+  padding-top: 2rem;
+}
+
+.aboutme_details {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.aboutme_content {
+  /* border: 1px solid green; */
+  /* margin: 25% 0 25% 0; */
+  margin-top: 3rem;
+}
+
+.aboutme_content > p {
+  text-align: justify;
+  font-size: large;
+}
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+  display: grid;
+  /* place-items: center; */
+}
+
+.aboutme_image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: all 400ms ease;
+}
+
+.aboutme_image:hover {
+  transform: rotate(0deg);
+}
+
+/*button*/
+
+.about_button_container {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* CSS */
+.primary_button_one {
+  height: 50px;
+  width: 150px;
+  background-color: #4db5ff;
+  color: #2c2c6c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.primary_button_one:hover {
+  color: #fff;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+
+.primary_button_two {
+  height: 50px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  color: #fff;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.primary_button_two:hover {
+  background-color: #4db5ff;
+  color: #2c2c6c;
+  transition: all 400ms ease;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .aboutme_container {
+    width: 90%;
+  }
+
+  .aboutme_details {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1%;
+  }
+  .about__me {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .aboutme_container {
+    width: 90%;
+  }
+}

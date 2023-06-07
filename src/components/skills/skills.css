@@ -1,86 +1,159 @@
-#skills {
-  margin-top: -4rem;
-}
-#skills h2 {
-  font-size: xx-large;
-}
-.experience_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  gap: 2rem;
-}
-.experience_container > div {
-  background: var(--color-bg-variant);
-  padding: 2.4rem 5rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  transition: var(--transition);
+.skills_container {
+  /* border: 1px solid white; */
+  width: 75%;
+  /* width: 100vh; */
+  margin: auto;
+  margin-top: 3rem;
 }
 
-.experience_container > div:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
-}
-
-.experience_container > div h3 {
+.skills_container > h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--color-primary);
 }
 
-.experience_content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-  margin-top: 1rem;
-}
-
-.skills-card {
+.skills_core_continer {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 3rem;
+  /* border: 1px solid pink; */
+  margin-bottom: 2rem;
 }
 
-.skills-card .skills-card-img {
-  margin-top: 6px;
-  /* color: var(--color-primary); */
-}
-.skills-card-img {
-  font-size: 25px;
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* ================================== medium screen ============================ */
-
-@media screen and (max-width: 1024px) {
-  #skills {
-    margin-top: 10rem;
-  }
-  .experience_container {
-    grid-template-columns: 1fr;
-  }
-  .experience_container > div {
-    width: 80%;
-    padding: 2rem;
-    margin: 0 auto;
-  }
-  .experience_content {
-    padding: 1rem;
-  }
+.skills_frontend {
+  /* border: 1px solid red; */
+  height: 400px;
+  width: 45%;
+  text-align: center;
+  background-color: #2c2c6c;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
 }
 
-/* ================================== small screen ============================ */
+.skills_frontend:hover {
+  transform: scale(1.1);
+}
 
-@media screen and (max-width: 600px) {
-  #skills {
-    margin-top: 5rem;
+.skills_backend {
+  /* border: 1px solid rgb(0, 255, 34); */
+  width: 45%;
+  height: 400px;
+  text-align: center;
+  background-color: #2c2c6c;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+}
+
+.skills_backend:hover {
+  transform: scale(1.1);
+}
+
+.skills_icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skills_tools_container {
+  /* border: 1px solid yellow; */
+  height: 300px;
+  width: 75%;
+  background-color: #2c2c6c;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+  border-radius: 1rem;
+  /* backdrop-filter: blur(15px); */
+}
+
+.skills_tools_container:hover {
+  transform: scale(1.1);
+}
+
+/* .github_calender_div {
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+}
+.github_calender_div:hover {
+  transform: scale(1.1);
+} */
+
+.skills_icons > div {
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease;
+}
+.skills_icons > div:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+  .skills_container {
+    width: 90%;
+    margin-top: 1rem;
   }
 
-  .experience_container {
+  .skills_core_continer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
-  .experience_container > div {
-    width: 100%;
-    padding: 2rem 1rem;
+  .skills_frontend {
+    width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+  }
+
+  .skills_backend {
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    padding-top: 1rem;
+  }
+  .skills_tools_container {
+    width: 90%;
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .skills_backend {
+    height: 300px;
+  }
+  .skills_container {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .skills_core_continer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .skills_frontend {
+    width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+  }
+
+  .skills_backend {
+    width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+  }
+  .skills_tools_container {
+    width: 90%;
+    padding-top: 1rem;
   }
 }
