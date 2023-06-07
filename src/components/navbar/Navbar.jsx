@@ -1,35 +1,9 @@
-// import React from "react";
-// import "./Navbar.css";
-
-// const Navbar = () => {
-//   return (
-//     <div className="paa">
-//       <div className="navbar_container">
-//         <div className="navbar_container_logo">SKC</div>
-//         <div className="navbar_container_navItems">
-//           <a href="">HOME</a>
-//           <a href="">ABOUT</a>
-//           <a href="">SKILLS</a>
-//           <a href="">PROJECTS</a>
-//           <a href="">GITHUB</a>
-//           <a href="">CONTACT</a>
-//           <a href="">RESUME</a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-// navbar.jsx;
 import React, { useState } from "react";
 import "./Navbar.css";
 import Resume from "../../assets/Shivam_Chaudhary_Resume.pdf";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState("#");
 
   const downloadPDF = () => {
     const link = document.createElement("a");
@@ -54,24 +28,12 @@ const Navbar = () => {
       <div
         className={`navbar_container_navItems ${isMenuOpen ? "menu-open" : ""}`}
       >
-        <a href="#" onClick={() => setActiveNav("#")}>
-          HOME
-        </a>
-        <a href="#about" onClick={() => setActiveNav("#about")}>
-          ABOUT
-        </a>
-        <a href="#skills" onClick={() => setActiveNav("#skills")}>
-          SKILLS
-        </a>
-        <a href="#projects" onClick={() => setActiveNav("#projects")}>
-          PROJECTS
-        </a>
-        <a href="#github" onClick={() => setActiveNav("#github")}>
-          GITHUB
-        </a>
-        <a href="#contact" onClick={() => setActiveNav("#contact")}>
-          CONTACT
-        </a>
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#github">GITHUB</a>
+        <a href="#contact">CONTACT</a>
         <a onClick={openPDFInNewTab}>RESUME</a>
       </div>
       <div

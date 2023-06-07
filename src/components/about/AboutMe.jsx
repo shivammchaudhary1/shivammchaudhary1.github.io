@@ -1,8 +1,21 @@
 import React from "react";
 import "./AboutMe.css";
 import aboutMePic from "../../assets/aboutMePic.jpg";
+import Resume from "../../assets/Shivam_Chaudhary_Resume.pdf";
 
 const AboutMe = () => {
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = Resume;
+    link.download = "Shivam_Chaudhary_Resume.pdf";
+    link.click();
+  };
+
+  const openPDFInNewTab = (event) => {
+    event.preventDefault();
+    window.open(Resume, "_blank");
+    downloadPDF();
+  };
   return (
     <div className="aboutme_container" id="about">
       <h4>Get to know</h4>
@@ -23,8 +36,12 @@ const AboutMe = () => {
             techniques.
           </p>
           <div className="about_button_container">
-            <button className="primary_button_two ">Let's Connect</button>
-            <button className="primary_button_one">Resume</button>
+            <a href="#contact">
+              <button className="primary_button_two ">Let's Connect</button>
+            </a>
+            <a onClick={openPDFInNewTab}>
+              <button className="primary_button_one">Resume</button>
+            </a>
           </div>
         </div>
       </div>
