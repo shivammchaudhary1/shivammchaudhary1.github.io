@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.79df579a.css",
-    "main.js": "/static/js/main.88e7e4c6.js",
+    "main.css": "/static/css/main.108d34b6.css",
+    "main.js": "/static/js/main.9305c374.js",
     "static/media/sparkAmerica (2).png": "/static/media/sparkAmerica (2).94fab52c448bd616cd25.png",
     "static/media/sparkAmerica (1).png": "/static/media/sparkAmerica (1).a19d4d15747b0235d2de.png",
     "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
@@ -26,11 +26,11 @@
     "static/media/flawless_Image (4).png": "/static/media/flawless_Image (4).2f93ca9e8d2253b7dc06.png",
     "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
-    "main.79df579a.css.map": "/static/css/main.79df579a.css.map",
-    "main.88e7e4c6.js.map": "/static/js/main.88e7e4c6.js.map"
+    "main.108d34b6.css.map": "/static/css/main.108d34b6.css.map",
+    "main.9305c374.js.map": "/static/js/main.9305c374.js.map"
   },
   "entrypoints": [
-    "static/css/main.79df579a.css",
-    "static/js/main.88e7e4c6.js"
+    "static/css/main.108d34b6.css",
+    "static/js/main.9305c374.js"
   ]
 }
