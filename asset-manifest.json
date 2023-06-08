@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.79df579a.css",
-    "main.js": "/static/js/main.9688fdde.js",
+    "main.js": "/static/js/main.e428fb4b.js",
+    "static/media/sparkAmerica (2).png": "/static/media/sparkAmerica (2).94fab52c448bd616cd25.png",
+    "static/media/sparkAmerica (1).png": "/static/media/sparkAmerica (1).a19d4d15747b0235d2de.png",
     "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
+    "static/media/sparkAmerica (5).png": "/static/media/sparkAmerica (5).470a9ec8b44eb30848ed.png",
     "static/media/flawless_Image (1).png": "/static/media/flawless_Image (1).0fa108035628138cb971.png",
     "static/media/aboutMePic.jpg": "/static/media/aboutMePic.8155e10e661920a86eaf.jpg",
     "static/media/skinCare (1).png": "/static/media/skinCare (1).921f8ac586f48bfb50ae.png",
@@ -10,11 +13,13 @@
     "static/media/tripToHeaven (3).png": "/static/media/tripToHeaven (3).7cd6bd62cf4b4ff7e336.png",
     "static/media/Shivam_Chaudhary_Resume.pdf": "/static/media/Shivam_Chaudhary_Resume.434daa3cffe3fa9933d7.pdf",
     "static/media/skinCare (2).png": "/static/media/skinCare (2).e838b7c7e188c3985cad.png",
+    "static/media/sparkAmerica (3).png": "/static/media/sparkAmerica (3).8f2baf024dfe6a0443df.png",
     "static/media/skinCare (3).png": "/static/media/skinCare (3).94c3ad53214a2d3bf863.png",
     "static/media/skinCare (4).png": "/static/media/skinCare (4).0b56699ae7ffac9ac254.png",
     "static/media/flawless_Image (3).png": "/static/media/flawless_Image (3).e296416db0c345954a56.png",
     "static/media/flawless_Image (2).png": "/static/media/flawless_Image (2).9435ccc9b3ffa0cba815.png",
     "static/media/tripToHeaven (1).png": "/static/media/tripToHeaven (1).77acc5be54f04a3685ea.png",
+    "static/media/sparkAmerica (4).png": "/static/media/sparkAmerica (4).d0375410dd7f55915ffd.png",
     "static/media/flawless_Image (5).png": "/static/media/flawless_Image (5).00656b24bb92ae13969c.png",
     "static/media/Shivam_Chaudhary.jpg": "/static/media/Shivam_Chaudhary.d4880e1c70aade38075a.jpg",
     "static/media/skinCare (5).png": "/static/media/skinCare (5).e4ce986216b4016a91fa.png",
@@ -22,10 +27,10 @@
     "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
     "main.79df579a.css.map": "/static/css/main.79df579a.css.map",
-    "main.9688fdde.js.map": "/static/js/main.9688fdde.js.map"
+    "main.e428fb4b.js.map": "/static/js/main.e428fb4b.js.map"
   },
   "entrypoints": [
     "static/css/main.79df579a.css",
-    "static/js/main.9688fdde.js"
+    "static/js/main.e428fb4b.js"
   ]
 }
