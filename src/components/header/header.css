@@ -85,7 +85,7 @@
   color: white;
 }
 
-.header-profile-image {
+.home-img {
   background: #052232;
   width: 22rem;
   left: calc(50% - 11rem);
@@ -135,7 +135,7 @@
     font-size: 15px; /* Adjust the font size for small screens */
   }
 
-  .header-profile-image {
+  .home-img {
     width: 16rem; /* Adjust the image width for small screens */
     margin-top: 1rem; /* Adjust the margin-top for small screens */
     /* box-shadow: rgba(247, 242, 242, 0.1) 0px 1px 2px 0px; */
@@ -163,7 +163,7 @@
 /* Tablet  */
 @media screen and (min-width: 651px) and (max-width: 1024px) {
   /* Update styles for tablet here */
-  .header-profile-image {
+  .home-img {
     width: 18rem; /* Adjust the image width for medium screens */
     margin-top: 4rem; /* Adjust the margin-top for medium screens */
   }

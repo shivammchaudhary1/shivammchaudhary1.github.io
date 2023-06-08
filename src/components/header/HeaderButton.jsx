@@ -49,7 +49,11 @@ const HeaderButton = () => {
 
   return (
     <div className="header-button-container">
-      <button className="primary-button-one" onClick={openPDFInNewTab}>
+      <button
+        id="resume-button-1"
+        className="primary-button-one"
+        onClick={openPDFInNewTab}
+      >
         Resume
       </button>
       <a href="#contact">

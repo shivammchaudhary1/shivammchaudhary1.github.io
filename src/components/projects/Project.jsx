@@ -6,7 +6,7 @@ const Project = (props) => {
   const { name, description, images, skills, githubLink, liveLink } = props;
 
   return (
-    <div className="singleProject">
+    <div className="singleProject project-card">
       <Carousel>
         {images.map((image, index) => (
           <div key={index} className="img">
@@ -14,9 +14,9 @@ const Project = (props) => {
           </div>
         ))}
       </Carousel>
-      <h3>{name}</h3>
-      <p className="discription_p">{description}</p>
-      <div className="tech_used">
+      <h3 class="project-title">{name}</h3>
+      <p className="discription_p project-description">{description}</p>
+      <div className="tech_used project-tech-stack">
         {/* Tech Stacks: */}
         {skills.map((SkillIcon, index) => (
           <div key={index} className="skill_icon">
@@ -25,10 +25,20 @@ const Project = (props) => {
         ))}
       </div>
       <div className="project_button_card">
-        <a href={liveLink} target="_blank" rel="noopener noreferrer">
+        <a
+          className="project-deployed-link"
+          href={liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="live_button">Live</button>
         </a>
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+        <a
+          className="project-github-link"
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="github_button">Github</button>
         </a>
       </div>

@@ -44,7 +44,7 @@ const Contact = () => {
             </div>
 
             <div className="heading_content">
-              <h3>shivamchaudhary75@gmail.com</h3>
+              <h3 id="contact-email">shivamchaudhary75@gmail.com</h3>
               <a href="mailto:shivamchaudhary75@gmail.com" target="_blank">
                 Send Message
               </a>

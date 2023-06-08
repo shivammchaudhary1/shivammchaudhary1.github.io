@@ -44,6 +44,7 @@ const SocialLink = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="contact-linkedin"
+        id="contact-linkedin"
       >
         <BsLinkedin size={30} />
       </a>
@@ -52,6 +53,7 @@ const SocialLink = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="contact-github"
+        id="contact-github"
       >
         <BsGithub size={30} />
       </a>

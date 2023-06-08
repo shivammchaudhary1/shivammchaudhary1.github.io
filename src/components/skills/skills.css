@@ -24,7 +24,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.skills_frontend {
+.skills-card {
   /* border: 1px solid red; */
   height: 400px;
   width: 45%;
@@ -34,9 +34,10 @@ h3 {
   overflow: hidden;
   position: relative;
   transition: all 400ms ease;
+  padding-top: 1rem;
 }
 
-.skills_frontend:hover {
+.skills-card:hover {
   transform: scale(1.1);
 }
 
@@ -50,6 +51,7 @@ h3 {
   overflow: hidden;
   position: relative;
   transition: all 400ms ease;
+  padding-top: 1rem;
 }
 
 .skills_backend:hover {
@@ -74,6 +76,7 @@ h3 {
   transition: all 400ms ease;
   border-radius: 1rem;
   /* backdrop-filter: blur(15px); */
+  padding-top: 1.5rem;
 }
 
 .skills_tools_container:hover {
@@ -110,7 +113,7 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
-  .skills_frontend {
+  .skills-card {
     width: 90%;
     margin: auto;
     padding-top: 1rem;
@@ -141,7 +144,7 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
-  .skills_frontend {
+  .skills-card {
     width: 90%;
     margin: auto;
     padding-top: 1rem;

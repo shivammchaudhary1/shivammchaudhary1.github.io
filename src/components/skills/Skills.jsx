@@ -26,86 +26,86 @@ const Skills = () => {
       {/* frontend and backend container  */}
       <div className="skills_core_continer">
         {/* forntend container  */}
-        <div className="skills_frontend">
+        <div className="skills-card">
           <h3>Frontend Development</h3>
 
           <div className="skills_icons">
             <div>
-              <FaHtml5 size={40} />
-              <p>HTML</p>
+              <FaHtml5 class="skills-card-img" size={40} />
+              <p class="skills-card-name">HTML</p>
             </div>
             {/*  */}
             <div>
-              <FaCss3Alt size={40} />
-              <p>CSS</p>
+              <FaCss3Alt class="skills-card-img" size={40} />
+              <p class="skills-card-name">CSS</p>
             </div>
             {/*  */}
             <div>
-              <FaJsSquare size={40} />
-              <p>JavaScript</p>
+              <FaJsSquare class="skills-card-img" size={40} />
+              <p class="skills-card-name">JavaScript</p>
             </div>
             {/*  */}
             <div>
-              <FaReact size={40} />
-              <p>React</p>
+              <FaReact class="skills-card-img" size={40} />
+              <p class="skills-card-name">React</p>
             </div>
             {/*  */}
             <div>
-              <SiRedux size={40} />
-              <p>Redux</p>
+              <SiRedux class="skills-card-img" size={40} />
+              <p class="skills-card-name">Redux</p>
             </div>
             {/*  */}
             <div>
-              <SiTypescript size={40} />
-              <p>TypeScript</p>
+              <SiTypescript class="skills-card-img" size={40} />
+              <p class="skills-card-name">TypeScript</p>
             </div>
             {/*  */}
             <div>
-              <SiChakraui size={40} />
-              <p>Chakra UI</p>
+              <SiChakraui class="skills-card-img" size={40} />
+              <p class="skills-card-name">Chakra UI</p>
             </div>
             {/*  */}
             <div>
-              <SiBootstrap size={40} />
-              <p>Bootstrap</p>
+              <SiBootstrap class="skills-card-img" size={40} />
+              <p class="skills-card-name">Bootstrap</p>
             </div>
             <div>
-              <SiAdobephotoshop size={40} />
-              <p>Photoshop</p>
+              <SiAdobephotoshop class="skills-card-img" size={40} />
+              <p class="skills-card-name">Photoshop</p>
             </div>
           </div>
         </div>
         {/* backend container  */}
         <div className="skills_backend">
-          <h3>Backend Development</h3>
+          <h3 class="skills-card-name">Backend Development</h3>
           <div className="skills_icons">
             <div>
-              <SiNodedotjs size={40} />
-              <p>Node Js</p>
+              <SiNodedotjs class="skills-card-img" size={40} />
+              <p class="skills-card-name">Node Js</p>
             </div>
             {/*  */}
             <div>
-              <SiExpress size={40} />
-              <p>express Js</p>
+              <SiExpress class="skills-card-img" size={40} />
+              <p class="skills-card-name">express Js</p>
             </div>
             {/*  */}
             <div>
-              <SiMongodb size={40} />
-              <p>MongoDB</p>
+              <SiMongodb class="skills-card-img" size={40} />
+              <p class="skills-card-name">MongoDB</p>
             </div>
             {/*  */}
             <div>
-              <VscJson size={40} />
-              <p>JSON</p>
+              <VscJson class="skills-card-img" size={40} />
+              <p class="skills-card-name">JSON</p>
             </div>
             {/*  */}
             <div>
-              <SiNpm size={40} />
-              <p>NPM</p>
+              <SiNpm class="skills-card-img" size={40} />
+              <p class="skills-card-name">NPM</p>
             </div>
             <div>
-              <SiFirebase size={40} />
-              <p>Firebase</p>
+              <SiFirebase class="skills-card-img" size={40} />
+              <p class="skills-card-name">Firebase</p>
             </div>
 
             {/*  */}
@@ -118,28 +118,28 @@ const Skills = () => {
         <h3>Tools</h3>
         <div className="skills_icons">
           <div>
-            <SiVercel size={40} />
-            <p>Vercel</p>
+            <SiVercel class="skills-card-img" size={40} />
+            <p class="skills-card-name">Vercel</p>
           </div>
           {/*  */}
           <div>
-            <SiNetlify size={40} />
-            <p>Netlify</p>
+            <SiNetlify class="skills-card-img" size={40} />
+            <p class="skills-card-name">Netlify</p>
           </div>
           {/*  */}
           <div>
-            <SiGithub size={40} />
-            <p>Github</p>
+            <SiGithub class="skills-card-img" size={40} />
+            <p class="skills-card-name">Github</p>
           </div>
           {/*  */}
           <div>
-            <SiPostman size={40} />
-            <p>Postman</p>
+            <SiPostman class="skills-card-img" size={40} />
+            <p class="skills-card-name">Postman</p>
           </div>
           {/*  */}
           <div>
-            <TbBrandVscode size={40} />
-            <p>VS Code</p>
+            <TbBrandVscode class="skills-card-img" size={40} />
+            <p class="skills-card-name">VS Code</p>
           </div>
           {/*  */}
         </div>

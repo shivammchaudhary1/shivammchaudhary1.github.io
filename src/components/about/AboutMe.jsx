@@ -17,7 +17,7 @@ const AboutMe = () => {
     downloadPDF();
   };
   return (
-    <div className="aboutme_container" id="about">
+    <div className="aboutme_container about section" id="about">
       <h4>Get to know</h4>
       <h1>About Me</h1>
       <div className="aboutme_details">
@@ -27,7 +27,7 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="aboutme_content">
-          <p>
+          <p id="user-detail-intro">
             As a front-end developer, creating engaging, responsive, and
             accessible user interfaces using modern web technologies. Good
             knowledge of HTML, CSS, JavaScript, and frameworks such as React.
@@ -39,9 +39,14 @@ const AboutMe = () => {
             <a href="#contact">
               <button className="primary_button_two ">Let's Connect</button>
             </a>
-            <a onClick={openPDFInNewTab}>
-              <button className="primary_button_one">Resume</button>
-            </a>
+
+            <button
+              id="resume-button-2"
+              onClick={openPDFInNewTab}
+              className="primary_button_one"
+            >
+              Resume
+            </button>
           </div>
         </div>
       </div>

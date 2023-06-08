@@ -33,18 +33,16 @@ import ProfileImage from "../../assets/Shivam_Chaudhary.jpg";
 
 const Header = () => {
   return (
-    <div className="header-container">
+    <div className="header-container" id="home">
       <h3 className="header-hello">Hello, I'm</h3>
-      <h1 className="header-name">Shivam Kumar Chaudhary</h1>
+      <h1 className="header-name" id="user-detail-name">
+        Shivam Kumar Chaudhary
+      </h1>
       <h4 className="header-designation">Full Stack Developer</h4>
       <HeaderButton />
       <SocialLink />
       <div>
-        <img
-          className="header-profile-image"
-          src={ProfileImage}
-          alt="Shivam Chaudhary"
-        />
+        <img className="home-img" src={ProfileImage} alt="Shivam Chaudhary" />
       </div>
     </div>
   );

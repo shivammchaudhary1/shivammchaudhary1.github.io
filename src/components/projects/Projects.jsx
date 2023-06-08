@@ -46,6 +46,13 @@ import flawless_Image3 from "../../assets/flawless_Image (3).png";
 import flawless_Image4 from "../../assets/flawless_Image (4).png";
 import flawless_Image5 from "../../assets/flawless_Image (5).png";
 
+//sparkAmerica
+import sparkAmerica_Image1 from "../../assets/sparkAmerica (1).png";
+import sparkAmerica_Image2 from "../../assets/sparkAmerica (2).png";
+import sparkAmerica_Image3 from "../../assets/sparkAmerica (3).png";
+import sparkAmerica_Image4 from "../../assets/sparkAmerica (4).png";
+import sparkAmerica_Image5 from "../../assets/sparkAmerica (5).png";
+
 let ProjectsDetails = [
   {
     name: "Trip to Heaven",
@@ -93,6 +100,22 @@ let ProjectsDetails = [
     skills: [FaHtml5, FaCss3Alt, FaJsSquare, SiBootstrap],
     githubLink: "https://github.com/shivammchaudhary1/skin-care",
     liveLink: "https://skinstore-lemon.vercel.app/",
+  },
+
+  {
+    name: "Spark America",
+    description:
+      "SparkAmerica is a fitness and wellness website in which they work with companies and organizations to help keep their employees healthy. My project aimed to replicate SparkAmerica.com using HTML, CSS, and JavaScript. The goal was to create a static website that closely resembled the functionality and appearance. I completed the project individually, within a tight timeframe of just five days",
+    images: [
+      sparkAmerica_Image1,
+      sparkAmerica_Image2,
+      sparkAmerica_Image3,
+      sparkAmerica_Image4,
+      sparkAmerica_Image5,
+    ],
+    skills: [FaHtml5, FaCss3Alt, FaJsSquare],
+    githubLink: "https://github.com/shivammchaudhary1/spark_america-clone",
+    liveLink: "https://spark-america-website-clone.netlify.app/",
   },
 ];
 

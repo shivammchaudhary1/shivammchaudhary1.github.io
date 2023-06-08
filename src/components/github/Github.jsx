@@ -8,6 +8,7 @@ const Github = () => {
       <div className="github_single_stats_container">
         <div className="github_single_stats">
           <img
+            id="github-top-langs"
             width="70%"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=shivammchaudhary1&theme=algolia&show_icons=true&hide_border=false&layout=compact"
             alt="Github Stats"
@@ -15,6 +16,7 @@ const Github = () => {
         </div>{" "}
         <div className="github_single_stats">
           <img
+            id="github-streak-stats"
             src="https://github-readme-streak-stats.herokuapp.com/?user=shivammchaudhary1&theme=algolia&hide_border=false"
             alt="Github Stats"
           />
@@ -24,6 +26,7 @@ const Github = () => {
       {/* calender  */}
       <div className="github_calender_div">
         <GitHubCalendar
+          id="github-stats-card"
           style={{
             textAlign: "center",
             border: "1px solid white",
