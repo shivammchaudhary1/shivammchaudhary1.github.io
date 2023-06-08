@@ -26,7 +26,6 @@ const Github = () => {
       {/* calender  */}
       <div className="github_calender_div">
         <GitHubCalendar
-          id="github-stats-card"
           style={{
             textAlign: "center",
             border: "1px solid white",
