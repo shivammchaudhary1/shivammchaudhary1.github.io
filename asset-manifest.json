@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.79df579a.css",
-    "main.js": "/static/js/main.e428fb4b.js",
+    "main.js": "/static/js/main.88e7e4c6.js",
     "static/media/sparkAmerica (2).png": "/static/media/sparkAmerica (2).94fab52c448bd616cd25.png",
     "static/media/sparkAmerica (1).png": "/static/media/sparkAmerica (1).a19d4d15747b0235d2de.png",
     "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
@@ -27,10 +27,10 @@
     "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
     "main.79df579a.css.map": "/static/css/main.79df579a.css.map",
-    "main.e428fb4b.js.map": "/static/js/main.e428fb4b.js.map"
+    "main.88e7e4c6.js.map": "/static/js/main.88e7e4c6.js.map"
   },
   "entrypoints": [
     "static/css/main.79df579a.css",
-    "static/js/main.e428fb4b.js"
+    "static/js/main.88e7e4c6.js"
   ]
 }
