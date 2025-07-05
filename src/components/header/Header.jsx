@@ -26,7 +26,7 @@
 // export default Header;
 
 import React from "react";
-import "./Header.css";
+import "./header.css";
 import HeaderButton from "./HeaderButton";
 import SocialLink from "./SocialLink";
 import ProfileImage from "../../assets/Shivam_Chaudhary.jpg";

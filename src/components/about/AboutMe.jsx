@@ -28,12 +28,14 @@ const AboutMe = () => {
         </div>
         <div className="aboutme_content">
           <p id="user-detail-intro">
-            As a front-end developer, creating engaging, responsive, and
-            accessible user interfaces using modern web technologies. Good
-            knowledge of HTML, CSS, JavaScript, and frameworks such as React.
-            Ensuring compatibility with different browsers and devices, and
-            staying up-to-date with the latest front- end development trends and
-            techniques.
+            MERN Stack Developer with a proven track record of delivering
+            robust, scalable, and user-centric web applications. Experienced in
+            building full-stack solutions using React, Node.js, Express, and
+            MongoDB, with a strong focus on performance, security, and clean
+            architecture. Adept at integrating AI capabilities to enhance
+            product functionality and deploying production-ready applications on
+            AWS. Committed to writing maintainable code and creating seamless
+            digital experiences across platforms.
           </p>
           <div className="about_button_container">
             <a href="#contact">

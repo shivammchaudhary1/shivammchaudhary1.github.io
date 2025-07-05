@@ -1,4 +1,4 @@
-import "./Skills.css";
+import "./skills.css";
 import { VscJson } from "react-icons/vsc";
 import { TbBrandVscode } from "react-icons/tb";
 import { FaCss3Alt, FaHtml5, FaJsSquare, FaReact } from "react-icons/fa";
@@ -17,7 +17,15 @@ import {
   SiTypescript,
   SiRedux,
   SiChakraui,
+  SiMui,
+  SiNextdotjs,
+  SiGoogle,
+  SiOpenai,
+  SiVisualstudio,
+  SiFigma,
 } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 const Skills = () => {
   return (
@@ -61,18 +69,35 @@ const Skills = () => {
             </div>
             {/*  */}
             <div>
+              <SiMui class="skills-card-img" size={40} />
+              <p class="skills-card-name">Material UI</p>
+            </div>
+            <div>
               <SiChakraui class="skills-card-img" size={40} />
               <p class="skills-card-name">Chakra UI</p>
             </div>
             {/*  */}
             <div>
+              <SiTailwindcss class="skills-card-img" size={40} />
+              <p class="skills-card-name">Tailwind</p>
+            </div>
+            <div>
               <SiBootstrap class="skills-card-img" size={40} />
               <p class="skills-card-name">Bootstrap</p>
             </div>
+
             <div>
+              <FaReact class="skills-card-img" size={40} />
+              <p class="skills-card-name">React Native</p>
+            </div>
+            <div>
+              <SiNextdotjs class="skills-card-img" size={40} />
+              <p class="skills-card-name">Next.js</p>
+            </div>
+            {/* <div>
               <SiAdobephotoshop class="skills-card-img" size={40} />
               <p class="skills-card-name">Photoshop</p>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* backend container  */}
@@ -93,6 +118,11 @@ const Skills = () => {
               <SiMongodb class="skills-card-img" size={40} />
               <p class="skills-card-name">MongoDB</p>
             </div>
+
+            <div>
+              <FaAws class="skills-card-img" size={40} />
+              <p class="skills-card-name">AWS</p>
+            </div>
             {/*  */}
             <div>
               <VscJson class="skills-card-img" size={40} />
@@ -107,8 +137,14 @@ const Skills = () => {
               <SiFirebase class="skills-card-img" size={40} />
               <p class="skills-card-name">Firebase</p>
             </div>
-
-            {/*  */}
+            <div>
+              <SiGoogle class="skills-card-img" size={40} />
+              <p class="skills-card-name">Google Gemini AI</p>
+            </div>
+            <div>
+              <SiOpenai class="skills-card-img" size={40} />
+              <p class="skills-card-name">OpenAI</p>
+            </div>
           </div>
         </div>
       </div>
@@ -139,7 +175,11 @@ const Skills = () => {
           {/*  */}
           <div>
             <TbBrandVscode class="skills-card-img" size={40} />
-            <p class="skills-card-name">VS Code</p>
+            <p class="skills-card-name">Visual Studio</p>
+          </div>
+          <div>
+            <SiFigma class="skills-card-img" size={40} />
+            <p class="skills-card-name">Figma</p>
           </div>
           {/*  */}
         </div>
