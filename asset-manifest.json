@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.108d34b6.css",
-    "main.js": "/static/js/main.9305c374.js",
+    "main.css": "/static/css/main.14fb34ab.css",
+    "main.js": "/static/js/main.a02882d5.js",
+    "static/media/career-explorer-2.png": "/static/media/career-explorer-2.701d6b0e1382723531d3.png",
+    "static/media/career-explorer-1.png": "/static/media/career-explorer-1.89cd1fa1a3b7705764a1.png",
     "static/media/sparkAmerica (2).png": "/static/media/sparkAmerica (2).94fab52c448bd616cd25.png",
+    "static/media/career-explorer-4.png": "/static/media/career-explorer-4.2900ab8abc374b56ad73.png",
     "static/media/sparkAmerica (1).png": "/static/media/sparkAmerica (1).a19d4d15747b0235d2de.png",
     "static/media/tripToHeaven (5).png": "/static/media/tripToHeaven (5).156fac786858c636cbb5.png",
     "static/media/sparkAmerica (5).png": "/static/media/sparkAmerica (5).470a9ec8b44eb30848ed.png",
+    "static/media/career-explorer-5.png": "/static/media/career-explorer-5.e068adf6cb95e491f981.png",
     "static/media/flawless_Image (1).png": "/static/media/flawless_Image (1).0fa108035628138cb971.png",
     "static/media/aboutMePic.jpg": "/static/media/aboutMePic.8155e10e661920a86eaf.jpg",
+    "static/media/enterprise-notion-3.png": "/static/media/enterprise-notion-3.d64569e59889520a4d22.png",
+    "static/media/career-explorer-3.png": "/static/media/career-explorer-3.688c0ba5a2a089b8a069.png",
     "static/media/skinCare (1).png": "/static/media/skinCare (1).921f8ac586f48bfb50ae.png",
+    "static/media/enterprise-notion-4.png": "/static/media/enterprise-notion-4.d557616474962dba84be.png",
+    "static/media/enterprise-notion-5.png": "/static/media/enterprise-notion-5.254d1881a9fe74972f04.png",
     "static/media/tripToHeaven (2).png": "/static/media/tripToHeaven (2).929770418caeaa7ccd93.png",
+    "static/media/enterprise-notion-2.png": "/static/media/enterprise-notion-2.1e3f0f256f0e7a27d2b5.png",
     "static/media/tripToHeaven (3).png": "/static/media/tripToHeaven (3).7cd6bd62cf4b4ff7e336.png",
-    "static/media/Shivam_Chaudhary_Resume.pdf": "/static/media/Shivam_Chaudhary_Resume.434daa3cffe3fa9933d7.pdf",
+    "static/media/enterprise-notion-1.png": "/static/media/enterprise-notion-1.fd1e441345671d81f6cc.png",
     "static/media/skinCare (2).png": "/static/media/skinCare (2).e838b7c7e188c3985cad.png",
     "static/media/sparkAmerica (3).png": "/static/media/sparkAmerica (3).8f2baf024dfe6a0443df.png",
     "static/media/skinCare (3).png": "/static/media/skinCare (3).94c3ad53214a2d3bf863.png",
@@ -23,14 +32,15 @@
     "static/media/flawless_Image (5).png": "/static/media/flawless_Image (5).00656b24bb92ae13969c.png",
     "static/media/Shivam_Chaudhary.jpg": "/static/media/Shivam_Chaudhary.d4880e1c70aade38075a.jpg",
     "static/media/skinCare (5).png": "/static/media/skinCare (5).e4ce986216b4016a91fa.png",
+    "static/media/Shivam_Chaudhary_Resume.pdf": "/static/media/Shivam_Chaudhary_Resume.074af4eece9caa8d54cb.pdf",
     "static/media/flawless_Image (4).png": "/static/media/flawless_Image (4).2f93ca9e8d2253b7dc06.png",
     "static/media/tripToHeaven (4).png": "/static/media/tripToHeaven (4).8181801e254c08c36c0d.png",
     "index.html": "/index.html",
-    "main.108d34b6.css.map": "/static/css/main.108d34b6.css.map",
-    "main.9305c374.js.map": "/static/js/main.9305c374.js.map"
+    "main.14fb34ab.css.map": "/static/css/main.14fb34ab.css.map",
+    "main.a02882d5.js.map": "/static/js/main.a02882d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.108d34b6.css",
-    "static/js/main.9305c374.js"
+    "static/css/main.14fb34ab.css",
+    "static/js/main.a02882d5.js"
   ]
 }
