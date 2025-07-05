@@ -1,7 +1,7 @@
 import React from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
-import "./Footer.css";
+import "./footer.css";
 
 const Footer = () => {
   return (

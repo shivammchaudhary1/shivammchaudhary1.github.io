@@ -20,7 +20,12 @@ import {
   SiTypescript,
   SiRedux,
   SiChakraui,
+  SiOpenai,
+  SiPython,
+  SiMui,
+  SiGoogle,
 } from "react-icons/si";
+
 //skills
 
 //trip to heaven images
@@ -53,7 +58,59 @@ import sparkAmerica_Image3 from "../../assets/sparkAmerica (3).png";
 import sparkAmerica_Image4 from "../../assets/sparkAmerica (4).png";
 import sparkAmerica_Image5 from "../../assets/sparkAmerica (5).png";
 
+//EnterPrise Notion
+import enterpriseNotion_Image1 from "../../assets/enterprise-notion-1.png";
+import enterpriseNotion_Image2 from "../../assets/enterprise-notion-2.png";
+import enterpriseNotion_Image3 from "../../assets/enterprise-notion-3.png";
+import enterpriseNotion_Image4 from "../../assets/enterprise-notion-4.png";
+import enterpriseNotion_Image5 from "../../assets/enterprise-notion-5.png";
+
+// Career Explorer
+import careerExplorer_Image1 from "../../assets/career-explorer-1.png";
+import careerExplorer_Image2 from "../../assets/career-explorer-2.png";
+import careerExplorer_Image3 from "../../assets/career-explorer-3.png";
+import careerExplorer_Image4 from "../../assets/career-explorer-4.png";
+import careerExplorer_Image5 from "../../assets/career-explorer-5.png";
+
 let ProjectsDetails = [
+  {
+    name: "Career Explorer",
+    description:
+      "Career Explorer is an AI-powered career guidance platform that helps students identify suitable career paths through DISC personality tests, RAISEC interest profiling, and educational surveys to deliver personalized, data-driven recommendations.",
+    images: [
+      careerExplorer_Image1,
+      careerExplorer_Image2,
+      careerExplorer_Image3,
+      careerExplorer_Image4,
+      careerExplorer_Image5,
+    ],
+    skills: [
+      FaReact,
+      SiRedux,
+      SiNodedotjs,
+      SiMongodb,
+      SiMui,
+      SiOpenai,
+      SiPython,
+    ],
+    githubLink: "https://github.com/shivammchaudhary1/career_explorer",
+    liveLink: "https://careerexplorer.me",
+  },
+  {
+    name: "Enterprise Notion",
+    description:
+      "A modern Notion-style document workspace with advanced AI capabilities for smarter document management and knowledge organization, featuring intelligent linking, auto-tagging, natural language search, rich text editing, multi-user support, and hierarchical organization—independently developed  with complete frontend and backend integration.",
+    images: [
+      enterpriseNotion_Image1,
+      enterpriseNotion_Image2,
+      enterpriseNotion_Image3,
+      enterpriseNotion_Image4,
+      enterpriseNotion_Image5,
+    ],
+    skills: [FaReact, SiMongodb, SiExpress, SiNodedotjs, SiMui, SiGoogle],
+    githubLink: "https://github.com/shivammchaudhary1/enterprise-notion",
+    liveLink: "https://enterprise-notion.vercel.app",
+  },
   {
     name: "Trip to Heaven",
     description:
