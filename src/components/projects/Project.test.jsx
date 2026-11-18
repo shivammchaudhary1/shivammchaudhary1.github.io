@@ -17,6 +17,10 @@ const project = {
 };
 
 describe("project gallery", () => {
+  it("omits the separate project role line", () => {
+    render(<Project {...project} role="Frontend Developer" />);
+    expect(screen.queryByText(/Frontend Developer/)).toBeNull();
+  });
   it("loads one full screenshot and separate small thumbnails", () => {
     const { container } = render(<Project {...project} />);
     const sources = [...container.querySelectorAll("img")].map((image) =>

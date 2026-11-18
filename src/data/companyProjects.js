@@ -10,32 +10,49 @@ export const companyProjects = [
       {
         id: "flightsafety",
         name: "FlightSafety International",
-        category: "Application modernization",
-        description:
-          "Contributed to application development and modernization for FlightSafety International using PHP, Laravel, and Symfony. The work includes maintaining existing functionality and supporting an upgrade from PHP 7 to the PHP 8.6 target.",
-        focus: ["PHP 7.* → 8.6", "Laravel", "Symfony"],
+        role: "Full Stack Developer · American Chase engagement",
+        category: "Legacy application modernization",
+        description: "Worked on FlightSafety International applications on behalf of American Chase, modernizing legacy code and supporting an upgrade from PHP 7 to PHP 8.4. The project used PHP, Laravel, AS400, and PHPUnit.",
+        focus: [
+          "Legacy modernization",
+          "PHP 7 → PHP 8.4",
+          "Unit testing",
+        ],
         url: "https://www.flightsafety.com/",
         linkLabel: "Client website",
-        techStack: ["PHP", "Laravel", "Symfony"],
+        techStack: [
+          "PHP",
+          "Laravel",
+          "AS400",
+          "PHPUnit",
+        ],
         responsibilities: [
-          "Developed and maintained PHP application functionality using Laravel and Symfony.",
-          "Supported migration work targeting an upgrade from PHP 7 to PHP 8.6.",
+          "Modernized legacy application code while maintaining existing functionality.",
+          "Supported migration from PHP 7 to PHP 8.4 and alignment with modern framework practices.",
+          "Worked with the PHP/Laravel codebase, AS400, and PHPUnit testing.",
         ],
         images: companyMedia["flightsafety"],
       },
       {
         id: "mount-sinai",
         name: "Mount Sinai",
+        role: "Full Stack Developer · Data integration",
         category: "StrataJazz · Data & payroll",
-        description:
-          "Contributed to StrataJazz data integration and payroll stabilization for Mount Sinai, working with attendance and other incoming data sources. The focus was resolving processing differences between weekly and biweekly payroll cycles.",
-        focus: ["StrataJazz", "Data integration", "Payroll"],
+        description: "Worked on Mount Sinai's StrataJazz data workflows through American Chase, cleansing and standardizing records from attendance systems and other cloud sources before ingestion. Also addressed payroll processing differences between weekly and biweekly cycles.",
+        focus: [
+          "Data cleansing",
+          "Standardization",
+          "Payroll reconciliation",
+        ],
         url: "https://www.mountsinai.org/",
         linkLabel: "Client website",
-        techStack: ["StrataJazz"],
+        techStack: [
+          "StrataJazz",
+        ],
         responsibilities: [
-          "Stabilized attendance data and other incoming sources within StrataJazz.",
-          "Investigated and corrected payroll processing differences across weekly and biweekly pay cycles.",
+          "Cleaned and normalized attendance records and other cloud-sourced data into a consistent format before transferring them to StrataJazz.",
+          "Standardized incoming records to support more reliable downstream StrataJazz processing.",
+          "Investigated and corrected payroll-processing differences across weekly and biweekly pay cycles.",
         ],
         images: companyMedia["mount-sinai"],
       },
@@ -48,20 +65,31 @@ export const companyProjects = [
       {
         id: "dream-country-visas",
         name: "Dream Country Visas",
-        category: "WordPress website",
-        description:
-          "Contributed to WordPress website development for Dream Country Visas, supporting the online presence of an immigration and visa consultancy through its client-facing website.",
-        focus: ["WordPress"],
+        role: "Frontend Developer · Website customization",
+        category: "Frontend website development",
+        description: "Completed the Dream Country Visas website by adapting pre-existing templates and customizing the design and functionality to the client's requirements with HTML, CSS, and vanilla JavaScript.",
+        focus: [
+          "Template adaptation",
+          "Client customization",
+          "Frontend development",
+        ],
         url: "https://dreamcountryvisas.com/",
-        techStack: ["WordPress"],
+        techStack: [
+          "HTML",
+          "CSS",
+          "Vanilla JavaScript",
+        ],
         responsibilities: [
-          "Contributed to the WordPress website implementation for Dream Country Visas and its immigration consultancy services.",
+          "Adapted existing website templates to meet the client's layout, content, and functionality requirements.",
+          "Customized pages, styles, and frontend behavior using HTML, CSS, and vanilla JavaScript.",
+          "Applied client-requested refinements to complete the website.",
         ],
         images: companyMedia["dream-country-visas"],
       },
       {
         id: "m-dadu-films",
         name: "M. Dadu Films",
+        role: "Full Stack Developer · End-to-end delivery",
         category: "Website development",
         description:
           "Built a full-stack platform for M. Dadu Films with Next.js and NestJS, bringing together the public website, talent profiles, casting workflows, and an administrative content system. Deployed the platform on AWS with Amazon S3 media storage.",
@@ -90,6 +118,7 @@ export const companyProjects = [
       {
         id: "devsangam",
         name: "Devsangam",
+        role: "Full Stack Developer · Product implementation",
         category: "Digital mala counter",
         description:
           "Built Devsangam, a React progressive web app for mantra practice and digital mala counting, backed by Express and MongoDB. The experience combines practice sessions, progress tracking, and a responsive interface for desktop and mobile.",
@@ -117,6 +146,7 @@ export const companyProjects = [
       {
         id: "the-golden-wasp",
         name: "The Golden Wasp",
+        role: "Web Developer · Hosting migration and maintenance",
         category: "Migration & maintenance",
         description:
           "Managed WordPress hosting migration and website maintenance for The Golden Wasp, moving the site from GoDaddy to Hostinger and supporting its continued operation after the transition.",
@@ -132,6 +162,7 @@ export const companyProjects = [
       {
         id: "keystroke-consulting",
         name: "Keystroke Consulting",
+        role: "WordPress Developer · Website implementation",
         category: "WordPress development",
         description:
           "Developed a WordPress website from scratch for Keystroke Consulting, creating a dedicated online presence for its recruitment and workforce consulting services.",
@@ -147,6 +178,7 @@ export const companyProjects = [
       {
         id: "dr-kumkum-gupta",
         name: "Dr. Kumkum Gupta",
+        role: "WordPress Developer · Website implementation",
         category: "WordPress development",
         description:
           "Built a WordPress website from scratch for Dr. Kumkum Gupta’s mental wellness and life-coaching practice, presenting her professional profile and coaching services through a dedicated online presence.",
@@ -162,6 +194,7 @@ export const companyProjects = [
       {
         id: "the-logic-machines",
         name: "The Logic Machines",
+        role: "WordPress Developer · Business website",
         category: "WordPress development",
         description:
           "Developed The Logic Machines’ WordPress website from scratch, bringing the company’s digital marketing, website development, and creative services together in a dedicated business website.",
@@ -183,6 +216,7 @@ export const companyProjects = [
       {
         id: "trackify",
         name: "Trackify.ai",
+        role: "Full Stack Developer · Leave management",
         category: "Frontend & backend development",
         description:
           "Contributed to full-stack development for Trackify.ai using MongoDB, Express, React, and Node.js. The primary focus was the leave management system and the frontend and backend workflows supporting it.",
@@ -198,6 +232,7 @@ export const companyProjects = [
       {
         id: "career-explorer",
         name: "Career Explorer",
+        role: "Full Stack Developer · Product delivery",
         category: "Planning through deployment",
         description:
           "Built Career Explorer from the ground up, taking ownership from product planning and full-stack implementation through deployment. The platform combines personality and interest assessments with AI-powered career guidance.",
@@ -223,6 +258,7 @@ export const companyProjects = [
       {
         id: "magnolia-home",
         name: "Magnolia Home",
+        role: "WordPress Developer · E-commerce improvements",
         category: "WordPress upgrades & maintenance",
         description:
           "Contributed to WordPress upgrades and e-commerce website maintenance for Magnolia Home, including variable-product pricing, WhatsApp contact options, scrolling interactions, and routine website backups.",
@@ -243,6 +279,7 @@ export const companyProjects = [
       {
         id: "evaluer",
         name: "eValuer",
+        role: "Full Stack Developer · Dashboard enhancements",
         category: "Dashboards & graphical interfaces",
         description:
           "Enhanced eValuer’s existing Next.js and NestJS application with graphical data representations and dashboard interfaces, focusing on how application data is presented and understood.",
@@ -258,6 +295,7 @@ export const companyProjects = [
       {
         id: "namo-grand-central-park",
         name: "Namo Grand Central Park",
+        role: "Mobile & Backend Developer · React Native",
         category: "Mobile application",
         description:
           "Contributing to the Namo Grand Central Park mobile application using React Native, Node.js, and Express, with responsibility for completing remaining mobile features and supporting backend functionality.",
