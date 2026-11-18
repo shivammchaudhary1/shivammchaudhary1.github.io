@@ -1,8 +1,9 @@
-import { FiArrowUpRight, FiBriefcase, FiDownload } from "react-icons/fi";
-import { experienceLetters } from "../../data/experienceLetters";
-import ProjectGallery from "../shared/ProjectGallery";
+import { FiArrowUpRight, FiBriefcase, FiMail } from "react-icons/fi";
+import { experienceTimeline } from "../../data/experienceTimeline";
 import "./ExperienceLetters.css";
 
+// Experience-letter images are deliberately not shown on the public page.
+// Contact Shivam to request verification instead of publishing document scans.
 export default function ExperienceLetters() {
   return (
     <section
@@ -11,59 +12,44 @@ export default function ExperienceLetters() {
       aria-labelledby="experience-heading"
     >
       <p className="section-eyebrow">Professional journey</p>
-      <h2 id="experience-heading">Experience Letters</h2>
+      <h2 id="experience-heading">Work Experience</h2>
       <p className="experience-intro">
-        The roles, contributions, and milestones behind my professional work,
-        documented by the companies I’ve worked with.
+        Hands-on engineering across client applications, product development,
+        system modernization and cloud deployment.
       </p>
-      <div className="experience-grid">
-        {experienceLetters.map((letter) => (
-          <article
-            key={letter.companyId}
-            id={`${letter.companyId}-experience`}
-            className="experience-card"
-            aria-labelledby={`${letter.companyId}-experience-title`}
-          >
-            <div className="experience-card-heading">
-              <span className="experience-icon"><FiBriefcase aria-hidden="true" /></span>
-              <div>
-                <h3 id={`${letter.companyId}-experience-title`}>{letter.company}</h3>
-                <p className="experience-role">{letter.role}</p>
+      <ol className="experience-timeline">
+        {experienceTimeline.map((entry) => (
+          <li key={entry.id} className="experience-timeline-item" id={`${entry.id}-experience`}>
+            <span className="experience-timeline-dot" aria-hidden="true"><FiBriefcase /></span>
+            <article className="experience-timeline-card">
+              <div className="experience-timeline-heading">
+                <div>
+                  <h3>{entry.company}</h3>
+                  <p className="experience-role">{entry.title}</p>
+                </div>
+                <p className="experience-tenure">
+                  <time dateTime={entry.start}>{entry.period.split(" – ")[0]}</time>
+                  {" – "}
+                  <time dateTime={entry.end}>{entry.period.split(" – ")[1]}</time>
+                </p>
               </div>
-            </div>
-            <p className="experience-tenure">
-              <time dateTime={letter.start}>{letter.startLabel}</time>
-              <span aria-hidden="true"> — </span><span className="sr-only"> to </span>
-              <time dateTime={letter.end}>{letter.endLabel}</time>
-            </p>
-            <ProjectGallery
-              name={`${letter.company} experience letter`}
-              mediaLabel="document"
-              viewerClassName="experience-document-viewer"
-              allowZoom
-              aspectRatio={`${letter.image.width} / ${letter.image.height}`}
-              images={[{
-                ...letter.image,
-                alt: `${letter.type} from ${letter.company} for Shivam Chaudhary`,
-                caption: "JPG document · Expand to read the full letter",
-              }]}
-            />
-            <p className="experience-letter-type">{letter.type}</p>
-            <p className="experience-summary">{letter.summary}</p>
-            <p className="experience-issued">
-              Issued <time dateTime={letter.issued}>{letter.issuedLabel}</time>
-            </p>
-            <div className="experience-actions">
-              <a href={letter.image.src} download={`${letter.companyId}-experience-letter.jpg`}>
-                <FiDownload aria-hidden="true" /> Download JPG
+              <ul className="experience-highlights">
+                {entry.highlights.map((point) => <li key={point}>{point}</li>)}
+              </ul>
+              <ul className="experience-tags" aria-label={`${entry.company} technologies`}>
+                {entry.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              </ul>
+              <a className="experience-projects-link" href={`#${entry.id}-projects`}>
+                See related projects <FiArrowUpRight aria-hidden="true" />
               </a>
-              <a href={`#${letter.companyId}-projects`}>
-                Company projects <FiArrowUpRight aria-hidden="true" />
-              </a>
-            </div>
-          </article>
+            </article>
+          </li>
         ))}
-      </div>
+      </ol>
+      <p className="experience-verification">
+        <FiMail aria-hidden="true" /> Employment verification documents are available on request.
+        <a href="mailto:shivamchaudhary75@gmail.com?subject=Experience%20verification%20request"> Request verification</a>
+      </p>
     </section>
   );
 }

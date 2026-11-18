@@ -28,7 +28,8 @@ import { FaAws } from "react-icons/fa";
 const Skills = () => {
   return (
     <div className="skills_container" id="skills">
-      <h2> What skills I have?</h2>
+      <p className="section-eyebrow">Tools of the trade</p>
+      <h2>Technical Skills</h2>
 
       <div className="skills_core_continer">
         <div className="skills-card">
@@ -147,7 +148,7 @@ const Skills = () => {
                 aria-hidden="true"
                 size={40}
               />
-              <p className="skills-card-name">Node Js</p>
+              <p className="skills-card-name">Node.js</p>
             </div>
 
             <div>
@@ -156,7 +157,7 @@ const Skills = () => {
                 aria-hidden="true"
                 size={40}
               />
-              <p className="skills-card-name">express Js</p>
+              <p className="skills-card-name">Express.js</p>
             </div>
 
             <div>

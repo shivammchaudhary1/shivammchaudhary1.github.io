@@ -2,9 +2,9 @@ import { readdir, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
-// Supply an original-image directory to optimize future additions without changing source files.
-const source = path.resolve(process.argv[2] || "src/assets");
-const output = path.resolve("src/assets");
+// Keep generated images in their named asset folder, or pass an explicit output folder.
+const source = path.resolve(process.argv[2] || "src/assets/profile");
+const output = path.resolve(process.argv[3] || source);
 await mkdir(output, { recursive: true });
 let before = 0;
 let after = 0;

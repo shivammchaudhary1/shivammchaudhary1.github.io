@@ -97,3 +97,13 @@
     gap: 2rem;
   }
 }
+
+/* A simple spam trap, hidden from keyboard and screen-reader navigation. */
+.contact-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}

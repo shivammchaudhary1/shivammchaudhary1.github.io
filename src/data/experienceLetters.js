@@ -1,9 +1,11 @@
-import americanChase from "../assets/experience/american-chase.jpg";
-import americanChasePreview from "../assets/experience/american-chase-preview.jpg";
-import askus from "../assets/experience/askus-studio.jpg";
-import askusPreview from "../assets/experience/askus-studio-preview.jpg";
-import wlc from "../assets/experience/wlc-technology.jpg";
-import wlcPreview from "../assets/experience/wlc-technology-preview.jpg";
+import {
+  americanChaseLetter as americanChase,
+  americanChaseLetterPreview as americanChasePreview,
+  askusLetter as askus,
+  askusLetterPreview as askusPreview,
+  wlcLetter as wlc,
+  wlcLetterPreview as wlcPreview,
+} from "../assets/assets";
 
 export const experienceLetters = [
   {

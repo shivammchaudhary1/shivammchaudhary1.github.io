@@ -1,78 +1,51 @@
 .header-container {
   position: relative;
-  width: min(1120px, calc(100% - 3rem));
-  margin: 7rem auto 0;
-  text-align: center;
-}
-.header-hello {
-  font-size: 1.2rem;
-  margin-bottom: 0.65rem;
-}
-.header-name {
-  margin-bottom: 0.8rem;
-}
-.header-designation {
-  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
-  font-weight: 600;
-}
-.header-button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.social-links-container {
-  display: flex;
-  gap: 1rem;
+  isolation: isolate;
+  width: min(1160px, calc(100% - 3rem));
+  margin: 6.5rem auto 0;
+  min-height: 540px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
   align-items: center;
-  justify-content: center;
+  gap: clamp(2rem, 5vw, 5rem);
 }
-.header-container > .social-links-container {
+.header-container::before {
+  content: "";
+  pointer-events: none;
   position: absolute;
-  left: 0;
-  top: 55%;
-  flex-direction: column;
+  z-index: -1;
+  inset: -3rem -2rem;
+  background: radial-gradient(circle at 75% 30%, rgba(54, 162, 226, .13), transparent 46%);
 }
-.social-links-container a {
-  min-width: 44px;
-  min-height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.hero-content { min-width: 0; }
+.hero-eyebrow { color: #9cd8fb; font-size: .74rem; font-weight: 700; letter-spacing: .13em; margin-bottom: 1.5rem; }
+.header-hello { color: #c4d9e6; font-size: 1.15rem; margin-bottom: .35rem; }
+.header-name { font-size: clamp(2.2rem, 4.9vw, 4.6rem); line-height: 1.1; letter-spacing: -.035em; margin-bottom: 1rem; }
+.header-designation { color: #a4dfff; font-size: clamp(1.13rem, 2.2vw, 1.45rem); font-weight: 700; line-height: 1.45; }
+.hero-designation-separator { color: #699cb8; }
+.hero-description { max-width: 670px; color: #d1e2ed; font-size: 1.04rem; margin-top: 1.35rem; }
+.header-button-container { display: flex; flex-wrap: wrap; align-items: center; gap: .85rem; margin-top: 1.75rem; }
+.hero-resume-link { display: inline-flex; min-height: 50px; align-items: center; padding-inline: .35rem; font-weight: 700; }
+.hero-resume-link:hover { text-decoration: underline; }
+.social-links-container { display: flex; align-items: center; justify-content: flex-start; gap: .85rem; }
+.header-container .social-links-container { margin-top: 1.25rem; }
+.social-links-container a { min-width: 44px; min-height: 44px; display: inline-flex; justify-content: center; align-items: center; }
+.social-links-container a:hover { color: #fff; }
+.hero-visual { min-width: 0; text-align: center; }
+.hero-image-frame { padding: .7rem; border: 1px solid rgba(137, 199, 240, .4); border-radius: 2rem; background: linear-gradient(135deg, rgba(43, 129, 176, .24), rgba(7, 33, 50, .3)); box-shadow: 0 24px 66px rgba(0, 0, 0, .22); }
+.home-img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center; border-radius: 1.5rem; }
+.hero-caption { font-size: .86rem; color: #a7c6d8; margin-top: .85rem; }
+@media (max-width: 900px) {
+  .header-container { width: calc(100% - 2rem); grid-template-columns: minmax(0, 1fr); margin-top: 7rem; min-height: 0; gap: 2rem; }
+  .hero-content { text-align: center; }
+  .hero-description { margin-inline: auto; }
+  .header-button-container, .social-links-container { justify-content: center; }
+  .hero-visual { width: min(380px, 85%); margin: 0 auto; }
 }
-.social-links-container a:hover {
-  color: #fff;
-}
-.home-img {
-  width: 22rem;
-  aspect-ratio: 1;
-  object-fit: cover;
-  margin: 3rem auto 0;
-  border-radius: 2rem;
-}
-@media (max-width: 800px) {
-  .header-container {
-    width: calc(100% - 2rem);
-    margin-top: 6.5rem;
-  }
-  .header-container > .social-links-container {
-    position: static;
-    flex-direction: row;
-    margin-top: 1.4rem;
-  }
-  .home-img {
-    width: min(18rem, 100%);
-    margin-top: 1.5rem;
-  }
-}
-@media (max-width: 380px) {
-  .header-button-container {
-    gap: 0.65rem;
-  }
-  .header-button-container a {
-    min-width: 0;
-    flex: 1;
-    padding-inline: 0.65rem;
-  }
+@media (max-width: 430px) {
+  .hero-eyebrow { font-size: .68rem; letter-spacing: .06em; }
+  .header-button-container { gap: .65rem; }
+  .header-button-container .primary-button-one,
+  .header-button-container .primary-button-two { min-width: 0; flex: 1 1 140px; padding-inline: .7rem; }
+  .hero-resume-link { justify-content: center; flex-basis: 100%; }
 }

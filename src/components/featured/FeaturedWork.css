@@ -1,0 +1,37 @@
+.featured-section {
+  width: min(1160px, calc(100% - 3rem));
+  margin: 6rem auto 4rem;
+}
+.featured-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: -0.75rem auto 2.25rem;
+  color: var(--muted);
+}
+.featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.featured-card {
+  overflow: hidden;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, rgba(11, 49, 68, .97), rgba(4, 30, 43, .96));
+  border: 1px solid rgba(114, 189, 236, .24);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .12);
+}
+.featured-media { display: block; position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #092d40; }
+.featured-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 240ms ease; }
+.featured-media:hover img { transform: scale(1.035); }
+.featured-media-arrow { position: absolute; right: 1rem; top: 1rem; padding: .1rem .65rem; border-radius: .5rem; background: rgba(4, 30, 43, .92); color: #fff; font-size: 1.35rem; }
+.featured-content { display: flex; flex: 1; flex-direction: column; padding: 1.5rem; gap: .85rem; }
+.featured-content h3 { font-size: clamp(1.3rem, 2vw, 1.55rem); }
+.featured-eyebrow { color: #94d7ff; font-size: .82rem; font-weight: 700; letter-spacing: .03em; }
+.featured-description { color: #dce7ef; font-size: .96rem; }
+.featured-tech { list-style: none; display: flex; flex-wrap: wrap; gap: .45rem; margin: .1rem 0 0; padding: 0; }
+.featured-tech li { font-size: .78rem; padding: .3rem .6rem; color: #d8ecf8; border: 1px solid rgba(151, 199, 228, .24); background: rgba(12, 54, 76, .65); border-radius: 99px; }
+.featured-actions { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin-top: auto; padding-top: .85rem; border-top: 1px solid rgba(151, 199, 228, .15); }
+.featured-actions a, .featured-more { display: inline-flex; align-items: center; min-height: 44px; font-size: .91rem; font-weight: 700; }
+.featured-actions a:hover, .featured-more:hover { text-decoration: underline; }
+.featured-more { display: flex; justify-content: center; width: fit-content; margin: 1.4rem auto 0; }
+@media (max-width: 780px) { .featured-section { width: calc(100% - 2rem); margin-block: 3rem; } .featured-grid { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; } .featured-content { padding: 1.2rem; } }
+@media (prefers-reduced-motion: reduce) { .featured-media img { transition: none; } }
