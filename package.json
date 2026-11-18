@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://shivammchaudhary1.github.io",
   "engines": {
-    "node": "^22.22.2 || ^24.15.0 || ^26.13.1"
+    "node": "^22.22.2 || ^24.15.0 || ^26.10.0"
   },
   "dependencies": {
     "@emailjs/browser": "^5.0.3",
@@ -21,18 +21,12 @@
     "dev": "vite --host 127.0.0.1 --port 3000",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4173",
-    "test": "vitest run",
-    "test:watch": "vitest",
     "optimize:images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.2",
-    "@testing-library/react": "^16.3.3",
     "@vitejs/plugin-react": "^6.3.0",
     "gh-pages": "^6.3.0",
-    "jsdom": "^31.0.1",
     "sharp": "^0.35.5",
-    "vite": "^8.3.8",
-    "vitest": "^5.1.1"
+    "vite": "^8.3.8"
   }
 }

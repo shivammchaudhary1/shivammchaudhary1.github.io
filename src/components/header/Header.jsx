@@ -6,10 +6,10 @@ import SocialLink from "./SocialLink";
 const Header = () => (
   <header className="header-container" id="home">
     <div className="hero-content">
-      <p className="hero-eyebrow">FULL-STACK ENGINEERING · PRODUCTION APPLICATIONS</p>
+      <p className="hero-eyebrow">FULL STACK DEVELOPER · PRODUCTION APPLICATIONS</p>
       <p className="header-hello">Hello, I'm</p>
       <h1 className="header-name" id="user-detail-name">Shivam Kumar Chaudhary</h1>
-      <p className="header-designation">Full Stack Developer <span className="hero-designation-separator">·</span> React, Next.js, Node.js &amp; AI</p>
+      <p className="header-designation">Full Stack Developer <span className="hero-designation-separator">·</span> React, Node.js, Express, MongoDB and AI</p>
       <p className="hero-description">
         I build scalable web applications and practical AI-powered products —
         from frontend experiences and backend APIs to cloud deployment and

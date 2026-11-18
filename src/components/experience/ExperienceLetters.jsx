@@ -1,4 +1,4 @@
-import { FiArrowUpRight, FiBriefcase, FiMapPin, FiMail } from "react-icons/fi";
+import { FiArrowUpRight, FiBriefcase, FiMapPin } from "react-icons/fi";
 import { experienceTimeline } from "../../data/experienceTimeline";
 import { experienceLetters } from "../../data/experienceLetters";
 import ProjectGallery from "../shared/ProjectGallery";
@@ -68,10 +68,6 @@ export default function ExperienceLetters() {
           );
         })}
       </ol>
-      <p className="experience-verification">
-        <FiMail aria-hidden="true" /> For additional verification,
-        <a href="mailto:shivamchaudhary75@gmail.com?subject=Experience%20verification%20request"> contact me directly</a>.
-      </p>
     </section>
   );
 }

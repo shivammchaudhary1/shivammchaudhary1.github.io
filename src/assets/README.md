@@ -8,12 +8,12 @@ import { aboutMePicNew, careerExplorer_Image1, resume } from "../../assets/asset
 
 | Folder | Contents |
 | --- | --- |
-| `profile/` | Hero portrait, previous About Me photo, supplied `aboutMePicNew.jpg` |
+| `profile/` | Hero portrait and supplied `aboutMePicNew.jpg` |
 | `backgrounds/` | Page background texture |
-| `projects/<project-name>/` | Full screenshots and thumbnails grouped by project; Career Explorer is shared by company and independent project entries |
+| `projects/<project-name>/` | Full screenshots, thumbnails, and responsive card variants grouped by project; Career Explorer is shared by company and independent project entries |
 | `certifications/` | Certificate previews and provenance |
-| `experience/<company-name>/` | Full JPG letters and lightweight previews, retained without making them visible in the public timeline |
-| `documents/resumes/` | Current and previous resume PDFs |
+| `experience/<company-name>/` | Full JPG experience letters and lightweight previews grouped by company |
+| `documents/resumes/` | Current resume PDF |
 
 Add a new asset to its matching folder, import and export it in `assets.js`, then use that named export. Keep descriptive filenames so images and thumbnails remain easy to match. Existing files were moved without re-encoding or changing their contents.
 

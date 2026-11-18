@@ -79,6 +79,10 @@ export default function FeaturedWork() {
                 {media && (
                   <img
                     src={media.src}
+                    srcSet={media.cardPreview
+                      ? `${media.cardPreview} 640w, ${media.src} ${media.width || 1280}w`
+                      : undefined}
+                    sizes="(max-width: 780px) calc(100vw - 2rem), (max-width: 1208px) calc((100vw - 4.5rem) / 2), 568px"
                     alt={`${item.title} application preview`}
                     width={media.width || 1280}
                     height={media.height || 800}

@@ -1,11 +1,9 @@
 // Central asset imports. Components and data modules consume named exports from here.
 // Public SEO files stay in public/ so their permanent URLs remain unchanged.
 import profileImage from "./profile/Shivam_Chaudhary.webp";
-import aboutMePic from "./profile/aboutMePic.webp";
 import aboutMePicNew from "./profile/aboutMePicNew.jpg";
 import backgroundTexture from "./backgrounds/bg-texture.png";
 import resume from "./documents/resumes/Shivam_Chaudhary_Resume.pdf";
-import resumeOld from "./documents/resumes/Shivam_Chaudhary_Resume_old.pdf";
 import tripToHeavenImage1 from "./projects/trip-to-heaven/tripToHeaven (1).webp";
 import tripToHeavenThumbnail1 from "./projects/trip-to-heaven/tripToHeaven (1)-thumb.webp";
 import tripToHeavenImage2 from "./projects/trip-to-heaven/tripToHeaven (2).webp";
@@ -104,14 +102,16 @@ import askusLetter from "./experience/askus-studio/askus-studio.jpg";
 import askusLetterPreview from "./experience/askus-studio/askus-studio-preview.jpg";
 import wlcLetter from "./experience/wlc-technology/wlc-technology.jpg";
 import wlcLetterPreview from "./experience/wlc-technology/wlc-technology-preview.jpg";
+import mDaduFilmsCardImage from "./projects/m-dadu-films/m-dadu-films-card.webp";
+import devsangamCardImage from "./projects/devsangam/devsangam-card.webp";
+import careerExplorerCardImage from "./projects/career-explorer/career-explorer-1-card.webp";
+import enterpriseNotionCardImage from "./projects/enterprise-notion/enterprise-notion-1-card.webp";
 
 export {
   profileImage,
-  aboutMePic,
   aboutMePicNew,
   backgroundTexture,
   resume,
-  resumeOld,
   tripToHeavenImage1,
   tripToHeavenThumbnail1,
   tripToHeavenImage2,
@@ -210,6 +210,10 @@ export {
   askusLetterPreview,
   wlcLetter,
   wlcLetterPreview,
+  mDaduFilmsCardImage,
+  devsangamCardImage,
+  careerExplorerCardImage,
+  enterpriseNotionCardImage,
 };
 
 // Shared gallery entries keep full screenshots and their thumbnails together.
@@ -233,12 +237,12 @@ export const sparkAmerica_Image2 = { src: sparkAmericaImage2, thumbnail: sparkAm
 export const sparkAmerica_Image3 = { src: sparkAmericaImage3, thumbnail: sparkAmericaThumbnail3 };
 export const sparkAmerica_Image4 = { src: sparkAmericaImage4, thumbnail: sparkAmericaThumbnail4 };
 export const sparkAmerica_Image5 = { src: sparkAmericaImage5, thumbnail: sparkAmericaThumbnail5 };
-export const enterpriseNotion_Image1 = { src: enterpriseNotionImage1, thumbnail: enterpriseNotionThumbnail1 };
+export const enterpriseNotion_Image1 = { src: enterpriseNotionImage1, thumbnail: enterpriseNotionThumbnail1, cardPreview: enterpriseNotionCardImage };
 export const enterpriseNotion_Image2 = { src: enterpriseNotionImage2, thumbnail: enterpriseNotionThumbnail2 };
 export const enterpriseNotion_Image3 = { src: enterpriseNotionImage3, thumbnail: enterpriseNotionThumbnail3 };
 export const enterpriseNotion_Image4 = { src: enterpriseNotionImage4, thumbnail: enterpriseNotionThumbnail4 };
 export const enterpriseNotion_Image5 = { src: enterpriseNotionImage5, thumbnail: enterpriseNotionThumbnail5 };
-export const careerExplorer_Image1 = { src: careerExplorerImage1, thumbnail: careerExplorerThumbnail1 };
+export const careerExplorer_Image1 = { src: careerExplorerImage1, thumbnail: careerExplorerThumbnail1, cardPreview: careerExplorerCardImage };
 export const careerExplorer_Image2 = { src: careerExplorerImage2, thumbnail: careerExplorerThumbnail2 };
 export const careerExplorer_Image3 = { src: careerExplorerImage3, thumbnail: careerExplorerThumbnail3 };
 export const careerExplorer_Image4 = { src: careerExplorerImage4, thumbnail: careerExplorerThumbnail4 };

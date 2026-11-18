@@ -73,7 +73,6 @@ const technologyNames = new Map([
 const ProjectsDetails = [
   {
     name: "Career Explorer",
-    role: "Full Stack Developer · WLC Technology",
     description:
       "Career Explorer is an AI-powered career guidance platform that helps students identify suitable career paths through DISC personality tests, RAISEC interest profiling, and educational surveys to deliver personalized, data-driven recommendations.",
     images: [
@@ -97,7 +96,6 @@ const ProjectsDetails = [
   },
   {
     name: "Enterprise Notion",
-    role: "Full Stack Developer · Independent project",
     description:
       "A modern Notion-style document workspace with advanced AI capabilities for smarter document management and knowledge organization, featuring intelligent linking, auto-tagging, natural language search, rich text editing, multi-user support, and hierarchical organization—independently developed  with complete frontend and backend integration.",
     images: [
@@ -113,7 +111,6 @@ const ProjectsDetails = [
   },
   {
     name: "Trip to Heaven",
-    role: "Frontend Developer · Team project",
     description:
       "Trip to Heaven is an online hotel and flight booking website that draws inspiration from the renowned platform, Make My Trip. Developed as a collaborative team project, it was successfully executed within a remarkable timeframe of just five days.",
     images: [
@@ -130,7 +127,6 @@ const ProjectsDetails = [
 
   {
     name: "FlawLess",
-    role: "Frontend Developer · Independent project",
     description:
       "Flawless is a beautiful and professional online e-commerce website for selling beauty and cosmetic products. It is an individual project inspired by Nykaa, and it aims to provide a seamless shopping experience for users.",
     images: [
@@ -147,7 +143,6 @@ const ProjectsDetails = [
 
   {
     name: "Skin Care",
-    role: "Frontend Developer · Team project",
     description:
       "Skin-Care is an esteemed online retailer offering a wide range of premium skincare, beauty, and cosmetic products sourced from renowned brands. Our meticulously crafted website, developed collaboratively, faithfully replicates the esteemed SkinStore.com. Remarkably completed within just five days, this achievement showcases our talented team's exceptional proficiency and dedication.",
     images: [
@@ -164,7 +159,6 @@ const ProjectsDetails = [
 
   {
     name: "Spark America",
-    role: "Frontend Developer · Independent project",
     description:
       "SparkAmerica is a fitness and wellness website in which they work with companies and organizations to help keep their employees healthy. My project aimed to replicate SparkAmerica.com using HTML, CSS, and JavaScript. The goal was to create a static website that closely resembled the functionality and appearance. I completed the project individually, within a tight timeframe of just five days",
     images: [

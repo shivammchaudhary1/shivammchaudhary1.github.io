@@ -1,9 +1,37 @@
 # Portfolio update report
 
 Date: 18 November 2026  
-Current branch: `portfolio-refresh-20261118-155018` (the portfolio owner's existing working branch)
+Current branch: `master`
 
 Status: implemented and verified locally; changes are uncommitted. No push, deployment, or production configuration change was performed.
+
+## Developer title cleanup and image optimization
+
+- Updated the hero eyebrow from **FULL-STACK ENGINEERING** to **FULL STACK DEVELOPER**. Existing certificate titles and project content remain intact.
+- Ran all **15 existing tests successfully before removing test files and tooling**, as requested. Removed five test files, `test` / `test:watch` scripts, Testing Library, jsdom, Vitest, and the Vitest-specific Vite configuration. Vite now imports `defineConfig` directly from `vite`.
+- Removed the unreferenced `src/data/projectMedia.js` compatibility module and 20 unused project role fields. Project descriptions, responsibilities, technologies, contact code, navigation, galleries, and experience code were checked against `HEAD` and preserved.
+- Removed the unused previous About Me image and old resume from the asset catalog and working source folders; local backup copies remain in ignored verification storage, and tracked originals remain recoverable from Git. The active hero, About Me photo, current resume, project screenshots, experience documents, and certificates are preserved.
+- Added 640 px WebP variants for the four Featured Projects. `srcSet` and `sizes` let the browser choose a smaller card image or the unchanged 1265-1280 px full screenshot according to viewport and display density. Below-the-fold image loading remains lazy. Mobile verification confirmed all four smaller variants were selected successfully. [Image attribute reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
+
+| Measured item | Before | After |
+| --- | --- | --- |
+| Installed dependency packages excluding project root | 147 | 83 |
+| Lockfile package entries excluding project root and including optional platforms | 205 | 141 |
+| Combined four Featured image files at full and card sizes | 179,030 bytes | 71,060 bytes for the smaller variants |
+| Total production build folder | 4,034,649 bytes | 3,766,878 bytes |
+| Entry JavaScript gzip using the same local zlib measurement | 108,448 bytes | 108,456 bytes |
+
+The smaller Featured variants are **60.3% lighter** than the full screenshots. Total build output is **267,771 bytes smaller**, a **6.6% reduction**. Initial JavaScript size is effectively unchanged; removing tests reduces development overhead rather than browser JavaScript. Full screenshots are retained for high-density displays and gallery expansion, so actual image transfer depends on the browser's selected variant.
+
+- Consistent Node setup: `.nvmrc` selects **26.10.0** and the Node 26 engine range now accepts `^26.10.0`, matching the owner's requested version and the runtime used for validation.
+- Moved the unused isolated Node 26.13.1 verification cache, **154,071,545 bytes**, out of the project into a local temporary archive without deleting it. Its location is recorded in ignored `test-results/cleanup-optimization/cache-archive.json`; this reduces local project-folder clutter, not the website download size.
+- Final validation: clean `npm ci --include=dev`, successful `npm run build`, valid direct dependencies, all **106 central asset imports resolve**, and all **111 emitted asset URLs return HTTP 200**. Browser checks preserved **20 project cards, 4 Featured cards, 4 certificates, and 3 experience entries**. Project filters, gallery next/close/Escape, document zoom/fit/close, mobile menu, section anchors, and required contact fields were checked.
+- `npm audit --omit=dev`: **0 findings**. Full audit: **9 high findings** remain in development/deployment tooling. No forced dependency downgrade or override was used.
+- Contact provider calls were mocked by the pre-cleanup tests; browser validation sent no real messages. No Lighthouse score or real-device Safari measurement was taken.
+- Updated setup, asset, and verification documentation. Temporary production preview was stopped after checks; the original development workflow on port 3000 was restored. No commit, push, or deployment was performed.
+- Screenshots: `test-results/optimized-portfolio-desktop.jpg`, `test-results/optimized-portfolio-mobile.jpg`. Before/after metrics are in ignored `test-results/cleanup-optimization/`.
+
+The sections below record earlier portfolio work and its verification at the time.
 
 ## Asset folders and About Me photo
 

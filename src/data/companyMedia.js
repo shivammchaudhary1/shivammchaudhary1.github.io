@@ -1,4 +1,6 @@
 import {
+  mDaduFilmsCardImage,
+  devsangamCardImage,
   flightsafetyImage as flightsafety,
   flightsafetyThumbnail as flightsafety_thumb,
   mountSinaiImage as mount_sinai,
@@ -61,6 +63,7 @@ const captures = {
   },
   "m-dadu-films": {
     src: m_dadu_films,
+    cardPreview: mDaduFilmsCardImage,
     thumbnail: m_dadu_films_thumb,
     width: 1265,
     height: 791,
@@ -69,6 +72,7 @@ const captures = {
   },
   devsangam: {
     src: devsangam,
+    cardPreview: devsangamCardImage,
     thumbnail: devsangam_thumb,
     width: 1280,
     height: 800,
