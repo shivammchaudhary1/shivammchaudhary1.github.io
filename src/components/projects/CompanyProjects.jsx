@@ -73,7 +73,7 @@ const CompanyProjects = ({ showMore = true }) => (
                 ))}
               </ul>
               <div className="company-project-details">
-                <h5>Roles &amp; Responsibilities</h5>
+                <h5>Key Responsibilities</h5>
                 <ul className="company-project-responsibilities">
                   {project.responsibilities.map((responsibility) => (
                     <li key={responsibility}>{responsibility}</li>
