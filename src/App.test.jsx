@@ -18,9 +18,25 @@ it("shows featured projects, all project groups, and an experience timeline", as
   expect(container.querySelectorAll("#projects article")).toHaveLength(20);
   expect(container.querySelectorAll(".certification-card")).toHaveLength(4);
   expect(container.querySelectorAll(".experience-timeline-card")).toHaveLength(3);
-  expect(container.querySelectorAll("#experience .project-gallery")).toHaveLength(0);
-  expect(container.querySelectorAll("#experience a[download]")).toHaveLength(0);
+  expect(container.querySelectorAll("#experience .project-gallery")).toHaveLength(3);
+  expect(container.querySelectorAll("#experience img")).toHaveLength(3);
 
+  expect(container.querySelector("#about").textContent).toContain("3 years of experience");
+  expect(container.querySelector("#experience").textContent).toContain("Mumbai · Remote");
+  expect(container.querySelector("#experience").textContent).toContain("Lucknow · On-site");
+  expect(container.querySelector("#experience").textContent).toContain("Indore · On-site");
+  expect(container.querySelector("#contact-email-secondary").getAttribute("href")).toBe("mailto:shivamchaudhary15may@gmail.com");
+  expect(container.querySelector("#contact-phone-secondary").getAttribute("href")).toBe("tel:+917275262500");
+  expect([...container.querySelectorAll("#skills h3")].map((heading) => heading.textContent))
+    .toEqual(["Frontend Development", "Backend Development", "Tools"]);
+  expect(container.querySelector(".skills-card").textContent).toContain("Zustand");
+  expect(container.querySelector(".skills_backend").textContent).toContain("NestJS");
+  expect(container.querySelector(".skills_tools_container").textContent).toContain("WordPress");
+  expect(container.querySelector("#skills").textContent).not.toContain("Laravel");
+  expect(container.querySelector("#about").textContent).toContain("MERN Stack Developer");
+  for (const image of container.querySelectorAll(".featured-media img")) {
+    expect(image.getAttribute("src")).not.toContain("-thumb");
+  }
   for (const card of container.querySelectorAll(".experience-timeline-item")) {
     const companyId = card.id.replace(/-experience$/, "");
     expect(container.querySelector(`#${companyId}-projects a[href="#${card.id}"]`)).toBeTruthy();

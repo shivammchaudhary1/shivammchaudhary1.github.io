@@ -1,4 +1,5 @@
 import { RiOpenaiFill } from "react-icons/ri";
+import { FiLayers } from "react-icons/fi";
 import "./skills.css";
 import { VscJson } from "react-icons/vsc";
 import { TbBrandVscode } from "react-icons/tb";
@@ -21,9 +22,41 @@ import {
   SiNextdotjs,
   SiGoogle,
   SiFigma,
+  SiNestjs,
+  SiReactquery,
+  SiPwa,
+  SiVite,
+  SiWordpress,
+  SiHostinger,
 } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+
+const projectSkills = {
+  frontend: [
+    { name: "Zustand", Icon: FiLayers },
+    { name: "TanStack Query", Icon: SiReactquery },
+    { name: "Progressive Web Apps (PWA)", Icon: SiPwa },
+  ],
+  backend: [
+    { name: "NestJS", Icon: SiNestjs },
+    { name: "Amazon S3", Icon: FaAws },
+    { name: "AWS Lightsail", Icon: FaAws },
+    { name: "AWS EC2", Icon: FaAws },
+  ],
+  tools: [
+    { name: "Vite", Icon: SiVite },
+    { name: "WordPress", Icon: SiWordpress },
+    { name: "Hostinger CDN", Icon: SiHostinger },
+  ],
+};
+
+const SkillItems = ({ skills }) => skills.map(({ name, Icon }) => (
+  <div key={name}>
+    <Icon className="skills-card-img" aria-hidden="true" size={40} />
+    <p className="skills-card-name">{name}</p>
+  </div>
+));
 
 const Skills = () => {
   return (
@@ -136,6 +169,7 @@ const Skills = () => {
               />
               <p className="skills-card-name">Next.js</p>
             </div>
+            <SkillItems skills={projectSkills.frontend} />
           </div>
         </div>
 
@@ -211,6 +245,7 @@ const Skills = () => {
               />
               <p className="skills-card-name">OpenAI</p>
             </div>
+            <SkillItems skills={projectSkills.backend} />
           </div>
         </div>
       </div>
@@ -266,6 +301,7 @@ const Skills = () => {
             <SiFigma className="skills-card-img" aria-hidden="true" size={40} />
             <p className="skills-card-name">Figma</p>
           </div>
+          <SkillItems skills={projectSkills.tools} />
         </div>
       </div>
     </div>

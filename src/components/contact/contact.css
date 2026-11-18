@@ -107,3 +107,81 @@
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
 }
+
+/* Four scannable contact methods and matching message panel. */
+.contact-intro {
+  max-width: 660px;
+  color: #c8dbe6;
+  margin: -1rem auto 2.25rem;
+  text-align: center;
+}
+.contact_container_devided { gap: clamp(1.25rem, 3vw, 2.5rem); grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); }
+.contact_email_whatsaap { grid-template-columns: minmax(0, 1fr); gap: .85rem; }
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  border: 1px solid rgba(125, 193, 230, .25);
+  border-radius: .9rem;
+  background: rgba(6, 41, 57, .94);
+  padding: 1rem;
+  min-width: 0;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.contact-method:hover { border-color: rgba(139,210,255,.65); transform: translateY(-2px); }
+.contact-method-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: .7rem;
+  background: rgba(77, 181, 255, .13);
+  color: #a8dfff;
+}
+.contact-method-content { min-width: 0; flex: 1; }
+.contact-method-content h3 { font-size: .93rem; margin-bottom: .12rem; color: #f3faff; }
+.contact-method-content a {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  min-height: 30px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  color: #9ed9ff;
+  font-weight: 600;
+  font-size: .92rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+.contact-method-content a:hover { text-decoration-color: currentColor; }
+.contact-method-content span {
+  display: flex;
+  gap: .3rem;
+  align-items: center;
+  margin-top: .2rem;
+  font-size: .78rem;
+  color: #c1d6e2;
+}
+.contact_form {
+  border: 1px solid rgba(125,193,230,.25);
+  border-radius: 1rem;
+  padding: clamp(1.1rem, 3vw, 1.7rem);
+  background: rgba(6, 41, 57, .94);
+}
+.contact-form-heading { display: flex; gap: .85rem; align-items: center; margin-bottom: 1.15rem; }
+.contact-form-heading > svg { font-size: 1.5rem; color: #8bd2ff; }
+.contact-form-heading h3 { font-size: 1.15rem; }
+.contact-form-heading p { color: var(--muted); font-size: .86rem; }
+.contact_form input, .contact_form textarea { margin-bottom: .25rem; background: #061f2d; }
+.contact_form .send_button { width: 100%; }
+@media(max-width:850px) {
+  .contact_container_devided { grid-template-columns: minmax(0, 1fr); }
+  .contact_email_whatsaap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media(max-width:600px) {
+  .contact_email_whatsaap { grid-template-columns: minmax(0, 1fr); }
+  .contact-method { padding: .85rem; }
+}
+@media(prefers-reduced-motion:reduce) { .contact-method { transition: none; } }

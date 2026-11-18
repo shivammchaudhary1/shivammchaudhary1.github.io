@@ -69,3 +69,40 @@
     padding-inline: 0.65rem;
   }
 }
+
+/* Three-year positioning and scannable expertise badges. */
+.about-experience-label {
+  color: #8bd2ff;
+  font-size: .92rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  margin-bottom: .7rem;
+  text-align: left;
+}
+.aboutme_content .about-supporting-text {
+  margin-top: 1rem;
+  color: #d0e3ed;
+  font-size: 1rem;
+  text-align: left;
+}
+.about-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.25rem;
+}
+.about-specialties span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 35px;
+  padding: .32rem .8rem;
+  border: 1px solid rgba(139,210,255,.35);
+  border-radius: 999px;
+  font-size: .84rem;
+  color: #d6efff;
+  background: rgba(14,82,107,.26);
+}
+@media(max-width:800px) {
+  .about-experience-label { text-align: left; }
+}

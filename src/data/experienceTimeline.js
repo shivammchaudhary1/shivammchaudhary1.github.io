@@ -4,6 +4,7 @@ export const experienceTimeline = [
   {
     id: "american-chase",
     company: "American Chase",
+    location: "Indore · On-site",
     title: "Full Stack Developer",
     start: "2026-01-26",
     end: "2026-08-27",
@@ -17,6 +18,7 @@ export const experienceTimeline = [
   {
     id: "askus-studio",
     company: "Askus Studio",
+    location: "Lucknow · On-site",
     title: "Full Stack Developer · Contract",
     start: "2025-07-15",
     end: "2026-01-15",
@@ -30,6 +32,7 @@ export const experienceTimeline = [
   {
     id: "wlc-technology",
     company: "WLC Technology",
+    location: "Mumbai · Remote",
     title: "Software Developer",
     start: "2023-08-28",
     end: "2025-07-08",
