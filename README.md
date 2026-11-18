@@ -4,7 +4,9 @@ A static React portfolio hosted on GitHub Pages. The existing sections, project 
 
 ## Local development
 
-Use Node.js 24.15 or newer in the supported Node 24 line, Node 22.22.2+, or Node 26+. The project declares its supported versions in `package.json`; `.nvmrc` selects Node 24.15.0.
+Use Node.js **26.13.1 LTS**, selected by `.nvmrc`. Compatible Node 22.22.2+ and 24.15.0+ releases are also supported within those major lines; Node 26 requires 26.13.1 or newer within the Node 26 line. The supported ranges are declared in `package.json`. With an existing Node version manager, install and select 26.13.1 before running the commands below. Updating `.nvmrc` does not replace the system Node installation.
+
+Stop any running dev, preview, or test-watch servers with Ctrl+C before `npm ci`, especially on Windows where native dependencies can remain locked by running Node processes.
 
 ```sh
 npm ci

@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://shivammchaudhary1.github.io",
   "engines": {
-    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+    "node": "^22.22.2 || ^24.15.0 || ^26.13.1"
   },
   "dependencies": {
     "@emailjs/browser": "^5.0.3",
@@ -26,7 +26,7 @@
     "optimize:images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.1",
+    "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
     "@vitejs/plugin-react": "^6.3.0",
     "gh-pages": "^6.3.0",

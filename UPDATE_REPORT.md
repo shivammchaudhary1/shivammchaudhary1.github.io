@@ -1,8 +1,21 @@
 # Portfolio update report
 
 Date: 18 November 2026  
-Branch: `newupdates`  
+Current branch: `codex/update-runtime-dependencies` (earlier portfolio changes were merged from `newupdates` into `master`)
+
 Status: implemented and verified locally; changes are uncommitted. No push, deployment, or production configuration change was performed.
+
+## Latest stable dependencies and Node LTS
+
+- Checked npm's `latest` dist-tag for every direct dependency on 18 November 2026. React and React DOM **19.3.1**, Vite **8.3.8**, Vitest **5.1.1**, and all other installed direct packages already match their latest stable versions. `npm outdated --json` returns `{}`.
+- Updated `.nvmrc` from **24.15.0** to **26.13.1**, the latest Node LTS in the official distribution index. Node 27 is an Alpha release and was not selected. [Node 26.13.1 release](https://nodejs.org/en/blog/release/v26.13.1), [Node release policy](https://nodejs.org/en/about/previous-releases).
+- Updated the Node engine range to `^22.22.2 || ^24.15.0 || ^26.13.1`, retaining compatible older LTS lines and avoiding automatic acceptance of untested future majors.
+- Raised the declared `@testing-library/dom` minimum from **10.4.1** to **10.4.2**, matching the already-installed latest patch. Updated matching root metadata in the lockfile. `npm update --include=dev` found no further available dependency updates; installed package versions did not change.
+- Downloaded Node 26.13.1 from nodejs.org into ignored local verification storage and verified its archive against the official SHA256 checksum list. Used this isolated runtime and its bundled npm **11.20.0** for installation and validation; the machine-wide Node selection was not changed.
+- Validation on Node 26.13.1: clean `npm ci --include=dev`, **13 tests across 5 files pass**, production build succeeds, and all **109 generated build files have identical SHA256 hashes** compared with the prior build on Node 26.10.0. `npm ls --depth=0` reports no invalid or missing direct dependencies.
+- `npm audit --omit=dev` reports **0 findings**. Full audit retains **10 high findings** in development/deployment tooling through the previously documented picomatch advisory, which still lists no patched version. No forced downgrade or override was applied.
+- Scope: `.nvmrc`, `package.json`, `package-lock.json`, README setup guidance, and this report. No application source, styles, images, content, tests, or deployment scripts were changed. Changes are uncommitted; no push or deployment was performed.
+- For an ordinary terminal using the installed nvm-windows manager, run `nvm install 26.13.1`, then `nvm use 26.13.1`, and verify `node --version` before installing dependencies. `.nvmrc` alone does not switch the active system runtime. Stop running dev/preview/test-watch processes before a clean install on Windows.
 
 ## Experience letters
 
@@ -192,7 +205,7 @@ Actual email delivery was not exercised: automated tests mock the provider and s
 
 ## Running and deployment
 
-Use a supported Node release: `^22.22.2`, `^24.15.0`, or `>=26.0.0`. `.nvmrc` selects 24.15.0.
+Use a supported Node release: `^22.22.2`, `^24.15.0`, or `^26.13.1`. `.nvmrc` now selects 26.13.1 LTS; see the latest dependency verification above.
 
 - `npm start`: development server on port 3000.
 - `npm run preview`: production preview on port 4173 after a build.
