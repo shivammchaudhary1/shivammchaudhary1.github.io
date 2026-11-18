@@ -1,8 +1,8 @@
-import Resume from "../../assets/Shivam_Chaudhary_Resume.pdf";
+import { resume } from "../../assets/assets";
 
 export default function ResumeLink({ children = "Resume", ...props }) {
   return (
-    <a href={Resume} target="_blank" rel="noopener noreferrer" {...props}>
+    <a href={resume} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </a>
   );

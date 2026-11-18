@@ -33,19 +33,21 @@ Delivery and error behavior are tested with a mocked EmailJS client. Tests never
 
 ## Company projects
 
-The Projects section includes professional contributions grouped in this order: **American Chase → Askus Studio → WLC Technology**, followed by all six existing projects under **More projects**. Edit the 14 professional entries in `src/data/companyProjects.js`. Each company card includes real screenshots, contribution descriptions, focus tags, Roles & Responsibilities, and a Tech Stack section. Known GitHub repositories are linked alongside project websites. Screenshot imports and provenance are in `src/data/companyMedia.js` and `src/assets/company/SCREENSHOT_SOURCES.md`. No project or employment dates are shown because none were supplied. Career Explorer appears both in its WLC work context and in the existing gallery.
+The Projects section includes professional contributions grouped in this order: **American Chase → Askus Studio → WLC Technology**, followed by all six existing projects under **More projects**. Edit the 14 professional entries in `src/data/companyProjects.js`. Each company card includes real screenshots, contribution descriptions, focus tags, Roles & Responsibilities, and a Tech Stack section. Known GitHub repositories are linked alongside project websites. Screenshot metadata is in `src/data/companyMedia.js`, asset imports are centralized in `src/assets/assets.js`, and provenance is in `src/assets/projects/SCREENSHOT_SOURCES.md`. Career Explorer appears both in its WLC work context and in the existing gallery.
 
 ## Images
 
-Project screenshots are WebP files up to 1280 px wide, with separate 160 × 90 thumbnails. Photos are also compressed WebP. The shared gallery supports previous/next buttons, thumbnail selection, arrow keys while focused inside the gallery, horizontal touch swipes, and an expandable screenshot viewer. The native dialog traps focus, supports Escape, and restores focus and page scrolling after closing. It mounts only the selected full screenshot, and below-the-fold images load lazily.
+Project screenshots are WebP files up to 1280 px wide, with separate 160 × 90 thumbnails. Profile photos live in `src/assets/profile/`; About Me uses the supplied `aboutMePicNew.jpg`. The shared gallery supports previous/next buttons, thumbnail selection, arrow keys while focused inside the gallery, horizontal touch swipes, and an expandable screenshot viewer. The native dialog traps focus, supports Escape, and restores focus and page scrolling after closing. It mounts only the selected full screenshot, and below-the-fold images load lazily.
+
+All application image and PDF imports are declared once in `src/assets/assets.js`. Use its named exports from components and data modules. Screenshots are grouped under `src/assets/projects/<project-name>/`, with separate `backgrounds/`, `profile/`, `documents/resumes/`, `certifications/`, and `experience/<company-name>/` folders. The old `src/data/projectMedia.js` module only re-exports gallery entries for compatibility. Public SEO files remain in `public/` to preserve their URLs; the early hero preload in `index.html` references the matching profile source file.
 
 To optimize future original PNG/JPEG additions:
 
 ```sh
-npm run optimize:images -- /path/to/original-images
+npm run optimize:images -- /path/to/original-images src/assets/projects/project-name
 ```
 
-The optimizer writes WebP files and project thumbnails into `src/assets/` and leaves the input originals untouched. Add original-gallery imports to `src/data/projectMedia.js` and company captures to `src/data/companyMedia.js`. Company captures have separate thumbnails; the Namo images are official Google Play screenshots and Career Explorer reuses its original local gallery. Public website and sign-in captures are labeled so they are not confused with internal application interfaces. Previous large originals remain recoverable in Git history; the working tree contains their compressed replacements. Both résumé PDFs remain intact, and only the current résumé is bundled.
+The optimizer writes WebP files and project thumbnails into the specified output folder, or alongside the inputs when no output folder is supplied, and leaves input originals untouched. With no arguments it uses `src/assets/profile/`. Add new imports and exports to `src/assets/assets.js`, then add company screenshot metadata to `src/data/companyMedia.js` as needed. Company captures have separate thumbnails; the Namo images are official Google Play screenshots and Career Explorer reuses its original local gallery. Public website and sign-in captures are labeled so they are not confused with internal application interfaces. Previous large originals remain recoverable in Git history; the working tree contains their compressed replacements. Both résumé PDFs remain intact, and only the current résumé is bundled.
 
 ## Dependencies and verification
 

@@ -50,8 +50,14 @@ const Navbar = () => {
         <a href="#home" className="nav-link home">
           HOME
         </a>
+        <a href="#featured" className="nav-link featured">
+          FEATURED
+        </a>
         <a href="#about" className="nav-link about">
           ABOUT
+        </a>
+        <a href="#experience" className="nav-link experience">
+          EXPERIENCE
         </a>
         <a href="#skills" className="nav-link skills">
           SKILLS
@@ -59,13 +65,9 @@ const Navbar = () => {
         <a href="#projects" className="nav-link projects">
           PROJECTS
         </a>
-        <a href="#experience" className="nav-link experience">
-          EXPERIENCE
-        </a>
         <a href="#certifications" className="nav-link certifications">
           CERTIFICATIONS
         </a>
-        <a href="#github">GITHUB</a>
         <a href="#contact" className="nav-link contact">
           CONTACT
         </a>

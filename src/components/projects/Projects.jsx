@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { RiOpenaiFill } from "react-icons/ri";
 import {
   tripToHeaven_Image1,
@@ -30,7 +31,7 @@ import {
   careerExplorer_Image3,
   careerExplorer_Image4,
   careerExplorer_Image5,
-} from "../../data/projectMedia";
+} from "../../assets/assets";
 import "./Projects.css";
 import Project from "./Project";
 import CompanyProjects from "./CompanyProjects";
@@ -173,31 +174,67 @@ const ProjectsDetails = [
   },
 ];
 
+const filters = [
+  { id: "all", label: "All work" },
+  { id: "clients", label: "Client work" },
+  { id: "ai", label: "AI products" },
+  { id: "learning", label: "Learning projects" },
+];
+
 const Projects = () => {
+  const [filter, setFilter] = useState("all");
+  const showClientWork = filter === "all" || filter === "clients";
+  const visiblePersonalProjects = ProjectsDetails.filter((project) => {
+    if (filter === "all") return true;
+    if (filter === "ai") return ["Career Explorer", "Enterprise Notion"].includes(project.name);
+    if (filter === "learning") return !["Career Explorer", "Enterprise Notion"].includes(project.name);
+    return false;
+  });
   return (
-    <div className="project_container" id="projects">
-      <h2>Projects</h2>
-      <CompanyProjects />
-      <div className="existing-projects-header" id="existing-projects">
-        <h3>More projects</h3>
-      </div>
-      <div className="project_sub-container">
-        {ProjectsDetails.map((e) => (
-          <Project
-            key={e.githubLink}
-            name={e.name}
-            description={e.description}
-            images={e.images}
-            skills={e.skills.map((icon) => ({
-              icon,
-              label: technologyNames.get(icon),
-            }))}
-            githubLink={e.githubLink}
-            liveLink={e.liveLink}
-          />
+    <section className="project_container" id="projects" aria-labelledby="projects-title">
+      <p className="section-eyebrow">Explore the portfolio</p>
+      <h2 id="projects-title">All Projects</h2>
+      <p className="project-filter-intro">
+        Browse professional client work, AI-driven products, and earlier learning projects.
+      </p>
+      <div className="project-filter-bar" role="group" aria-label="Filter projects">
+        {filters.map((option) => (
+          <button
+            type="button"
+            key={option.id}
+            className={`project-filter-chip ${filter === option.id ? "is-active" : ""}`}
+            aria-pressed={filter === option.id}
+            onClick={() => setFilter(option.id)}
+          >
+            {option.label}
+          </button>
         ))}
       </div>
-    </div>
+      {showClientWork && <CompanyProjects showMore={filter === "all"} />}
+      {visiblePersonalProjects.length > 0 && (
+        <div className="project-group-personal">
+          <div className="existing-projects-header" id="existing-projects">
+            <h3>{filter === "learning" ? "Learning Projects" : filter === "ai" ? "AI & Product Projects" : "Independent & Learning Projects"}</h3>
+          </div>
+          <div className="project_sub-container">
+            {visiblePersonalProjects.map((project) => (
+              <Project
+                key={project.githubLink}
+                name={project.name}
+                description={project.description}
+                images={project.images}
+                skills={project.skills.map((icon) => ({
+                  icon,
+                  label: technologyNames.get(icon),
+                }))}
+                githubLink={project.githubLink}
+                liveLink={project.liveLink}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 

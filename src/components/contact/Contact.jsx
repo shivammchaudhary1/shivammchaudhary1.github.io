@@ -11,6 +11,12 @@ const Contact = () => {
     event.preventDefault();
     if (pending.current) return;
     const form = event.currentTarget;
+    // Quietly discard automated submissions that fill the hidden honeypot.
+    if (new FormData(form).get("company_website")) {
+      form.reset();
+      setStatus("success");
+      return;
+    }
     pending.current = true;
     setStatus("sending");
     try {
@@ -76,6 +82,16 @@ const Contact = () => {
             aria-label="Contact Shivam"
             aria-busy={status === "sending"}
           >
+            <div className="contact-honeypot" aria-hidden="true">
+              <label htmlFor="contact-company-website">Leave this field empty</label>
+              <input
+                id="contact-company-website"
+                name="company_website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
             <label htmlFor="contact-name">Your Name</label>
             <input
               id="contact-name"

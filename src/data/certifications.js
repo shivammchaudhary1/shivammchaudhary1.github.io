@@ -1,7 +1,9 @@
-import foundations from "../assets/certifications/full-stack-foundations.webp";
-import promptEngineer from "../assets/certifications/prompt-engineer.webp";
-import webDevelopment from "../assets/certifications/web-development.webp";
-import zoomMarathon from "../assets/certifications/zoom-marathon.webp";
+import {
+  foundationsCertificate as foundations,
+  promptEngineerCertificate as promptEngineer,
+  webDevelopmentCertificate as webDevelopment,
+  zoomMarathonCertificate as zoomMarathon,
+} from "../assets/assets";
 
 export const certifications = [
   {

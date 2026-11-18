@@ -1,9 +1,21 @@
 # Portfolio update report
 
 Date: 18 November 2026  
-Current branch: `codex/update-runtime-dependencies` (earlier portfolio changes were merged from `newupdates` into `master`)
+Current branch: `portfolio-refresh-20261118-155018` (the portfolio owner's existing working branch)
 
 Status: implemented and verified locally; changes are uncommitted. No push, deployment, or production configuration change was performed.
+
+## Asset folders and About Me photo
+
+- Inspected the current working folder before editing and preserved the owner's in-progress portfolio refresh, including Featured Projects, Case Studies, project filtering, private experience-letter handling, and SEO files. Work remains on the owner's existing branch; no new branch is retained.
+- Moved **101 files** into named folders without changing their contents. Project images and thumbnails now live together under `src/assets/projects/<project-name>/`; profile photos, backgrounds, resume PDFs, certificates, and company experience letters have dedicated folders.
+- Added **`src/assets/assets.js`** as the central import/export module for **104 image and PDF assets** and the 30 existing screenshot/thumbnail gallery entries. Updated components, company media, certificates, and letter data to use named exports. The old `src/data/projectMedia.js` provides compatibility re-exports without duplicate declarations.
+- About Me now uses the supplied **`src/assets/profile/aboutMePicNew.jpg`**, with its actual 400 by 400 dimensions. The previous About Me photo remains available in `profile/`; the hero portrait and resume documents are preserved.
+- Kept public favicon/social/SEO files at their stable URLs. Updated the HTML hero preload to its moved source, and supplied the CSS background through the central asset export in `src/index.jsx`.
+- Updated the image optimizer to keep generated files in the specified project folder or beside its inputs. Added folder and import instructions in `src/assets/README.md` and the main README.
+- Validation: all original asset hashes match the pre-task snapshot; all **104 central import paths resolve**; **37 other pre-existing source files are byte-for-byte unchanged**. The full **28-test suite across 10 files** and production build pass. Desktop/mobile About Me views, project preview dialog, hero preload, background, and resume URL were checked in the browser.
+- Verification screenshots: `test-results/organized-assets-about-desktop.jpg` and `test-results/organized-assets-about-mobile.jpg`. The temporary preview server was stopped afterward to avoid native dependency locks during future installs.
+- No dependencies, runtime settings, project descriptions, or other UI content were changed by this asset organization. No commit, push, or deployment performed.
 
 ## Latest stable dependencies and Node LTS
 

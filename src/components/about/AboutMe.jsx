@@ -1,5 +1,5 @@
+import { aboutMePicNew } from "../../assets/assets";
 import "./AboutMe.css";
-import aboutMePic from "../../assets/aboutMePic.webp";
 import ResumeLink from "../shared/ResumeLink";
 
 const AboutMe = () => {
@@ -11,25 +11,24 @@ const AboutMe = () => {
         <div className="about__me">
           <div className="aboutme_image">
             <img
-              width="720"
-              height="720"
+              width="400"
+              height="400"
               loading="lazy"
               decoding="async"
-              src={aboutMePic}
+              src={aboutMePicNew}
               alt="Shivam Chaudhary"
             />
           </div>
         </div>
         <div className="aboutme_content">
           <p id="user-detail-intro">
-            MERN Stack Developer with a proven track record of delivering
-            robust, scalable, and user-centric web applications. Experienced in
-            building full-stack solutions using React, Node.js, Express, and
-            MongoDB, with a strong focus on performance, security, and clean
-            architecture. Adept at integrating AI capabilities to enhance
-            product functionality and deploying production-ready applications on
-            AWS. Committed to writing maintainable code and creating seamless
-            digital experiences across platforms.
+            I'm a full-stack developer with professional experience building
+            production web applications, client platforms and practical AI
+            integrations. My work spans React and Next.js frontends, Node.js
+            backends, PHP application modernization, MongoDB, cloud deployment
+            and responsive user interfaces. I enjoy translating complex
+            requirements into maintainable software — from architecture through
+            delivery.
           </p>
           <div className="about_button_container">
             <a href="#contact" className="primary-button-two">

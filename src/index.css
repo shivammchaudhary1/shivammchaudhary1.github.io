@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--background) url("./assets/bg-texture.png");
+  background: var(--background) var(--background-texture, none);
   color: var(--text);
   line-height: 1.7;
 }
@@ -165,4 +165,10 @@ button:disabled {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+/* Improve navigation clarity on small screens without overriding base typography. */
+#featured, #case-studies, #experience, #projects { scroll-margin-top: 6.5rem; }
+@media (max-width: 420px) {
+  body { overflow-wrap: break-word; }
 }
