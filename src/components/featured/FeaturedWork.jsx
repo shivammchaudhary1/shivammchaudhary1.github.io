@@ -78,7 +78,7 @@ export default function FeaturedWork() {
               >
                 {media && (
                   <img
-                    src={media.thumbnail || media.src}
+                    src={media.src}
                     alt={`${item.title} application preview`}
                     width={media.width || 1280}
                     height={media.height || 800}

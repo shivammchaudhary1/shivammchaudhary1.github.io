@@ -21,15 +21,26 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="aboutme_content">
+          <p className="about-experience-label">3 Years of Professional Experience</p>
           <p id="user-detail-intro">
-            I'm a full-stack developer with professional experience building
-            production web applications, client platforms and practical AI
-            integrations. My work spans React and Next.js frontends, Node.js
-            backends, PHP application modernization, MongoDB, cloud deployment
-            and responsive user interfaces. I enjoy translating complex
-            requirements into maintainable software — from architecture through
-            delivery.
+            I have 3 years of experience as a MERN Stack Developer, building
+            dependable, user-focused applications with MongoDB, Express.js,
+            React and Node.js. I turn complex ideas into responsive interfaces,
+            scalable backend APIs and production-ready web applications,
+            from database design through deployment.
           </p>
+          <p className="about-supporting-text">
+            My professional work includes building full-stack web platforms,
+            mobile experiences, AI-assisted products and content-managed client
+            websites. I enjoy owning features end to end, collaborating with
+            teams, and shipping clean, maintainable solutions that solve real
+            problems.
+          </p>
+          <div className="about-specialties" aria-label="Primary areas of expertise">
+            <span>MERN Stack Development</span>
+            <span>AI Integrations</span>
+            <span>Cloud & Deployment</span>
+          </div>
           <div className="about_button_container">
             <a href="#contact" className="primary-button-two">
               Let's Connect
