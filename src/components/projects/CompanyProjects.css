@@ -1,0 +1,227 @@
+.company-projects-intro {
+  max-width: 40rem;
+  margin: -0.75rem auto 1.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+.company-projects-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 3rem;
+}
+.company-projects-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(77, 181, 255, 0.3);
+  border-radius: 2rem;
+  background: rgba(5, 34, 50, 0.9);
+  font-size: 0.9rem;
+  color: #dcebf5;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+.company-projects-nav a:hover {
+  border-color: var(--accent);
+  background: #10374e;
+}
+.company-project-group {
+  margin-bottom: 3.5rem;
+}
+.company-project-group-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(77, 181, 255, 0.25);
+}
+.company-project-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: #c7e8ff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.company-project-company {
+  min-width: 0;
+}
+.company-project-company p {
+  margin-bottom: 0.2rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.company-project-company h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  overflow-wrap: anywhere;
+}
+.company-project-count {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.company-project-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem 1.2rem;
+  margin-left: auto;
+}
+.company-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.company-project-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1.5rem;
+  border: 1px solid rgba(77, 181, 255, 0.25);
+  border-radius: 1rem;
+  background: rgba(5, 34, 50, 0.94);
+}
+.company-project-category {
+  margin-top: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+.company-project-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.company-project-description {
+  margin-bottom: 1.25rem;
+  color: #e1eaf0;
+  overflow-wrap: anywhere;
+}
+.company-project-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  list-style: none;
+}
+.company-project-focus li {
+  max-width: 100%;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(145, 154, 234, 0.25);
+  border-radius: 0.4rem;
+  background: rgba(44, 44, 108, 0.5);
+  color: #dfe6ff;
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+.company-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  margin-top: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.company-project-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+.company-project-details {
+  margin-bottom: 1.2rem;
+}
+.company-project-details h5 {
+  margin: 0 0 0.65rem;
+  color: #c5d5df;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.company-project-responsibilities {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #e1eaf0;
+  font-size: 0.95rem;
+}
+.company-project-responsibilities li + li {
+  margin-top: 0.4rem;
+}
+.company-project-responsibilities li::marker {
+  color: var(--accent);
+}
+.company-project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.company-project-stack li {
+  max-width: 100%;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(77, 181, 255, 0.3);
+  border-radius: 0.4rem;
+  color: #d8efff;
+  background: #0b2d42;
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+.company-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.4rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+.existing-projects-header {
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+}
+.existing-projects-header h3 {
+  font-size: 1.6rem;
+}
+@media (max-width: 650px) {
+  .company-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .company-project-card {
+    padding: 1.2rem;
+  }
+  .company-project-group-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .company-project-company {
+    flex: 1;
+  }
+  .company-project-header-actions {
+    width: calc(100% - 3.75rem);
+    margin-left: 3.75rem;
+    justify-content: flex-start;
+  }
+  .company-project-count {
+    margin-left: 0;
+  }
+  .company-projects-nav {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}

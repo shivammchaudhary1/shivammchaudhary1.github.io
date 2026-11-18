@@ -1,8 +1,40 @@
-import React from "react";
+import { RiOpenaiFill } from "react-icons/ri";
+import {
+  tripToHeaven_Image1,
+  tripToHeaven_Image2,
+  tripToHeaven_Image3,
+  tripToHeaven_Image4,
+  tripToHeaven_Image5,
+  skinCare_Image1,
+  skinCare_Image2,
+  skinCare_Image3,
+  skinCare_Image4,
+  skinCare_Image5,
+  flawless_Image1,
+  flawless_Image2,
+  flawless_Image3,
+  flawless_Image4,
+  flawless_Image5,
+  sparkAmerica_Image1,
+  sparkAmerica_Image2,
+  sparkAmerica_Image3,
+  sparkAmerica_Image4,
+  sparkAmerica_Image5,
+  enterpriseNotion_Image1,
+  enterpriseNotion_Image2,
+  enterpriseNotion_Image3,
+  enterpriseNotion_Image4,
+  enterpriseNotion_Image5,
+  careerExplorer_Image1,
+  careerExplorer_Image2,
+  careerExplorer_Image3,
+  careerExplorer_Image4,
+  careerExplorer_Image5,
+} from "../../data/projectMedia";
 import "./Projects.css";
 import Project from "./Project";
+import CompanyProjects from "./CompanyProjects";
 
-//skills
 import { VscJson } from "react-icons/vsc";
 import { FaCss3Alt, FaHtml5, FaJsSquare, FaReact } from "react-icons/fa";
 import {
@@ -10,69 +42,34 @@ import {
   SiNodedotjs,
   SiExpress,
   SiMongodb,
-  SiNpm,
-  SiVercel,
-  SiNetlify,
-  SiGithub,
-  SiPostman,
   SiFirebase,
-  SiAdobephotoshop,
-  SiTypescript,
   SiRedux,
   SiChakraui,
-  SiOpenai,
   SiPython,
   SiMui,
   SiGoogle,
 } from "react-icons/si";
 
-//skills
+const technologyNames = new Map([
+  [VscJson, "JSON"],
+  [FaCss3Alt, "CSS"],
+  [FaHtml5, "HTML"],
+  [FaJsSquare, "JavaScript"],
+  [FaReact, "React"],
+  [SiBootstrap, "Bootstrap"],
+  [SiNodedotjs, "Node.js"],
+  [SiExpress, "Express"],
+  [SiMongodb, "MongoDB"],
+  [SiFirebase, "Firebase"],
+  [SiRedux, "Redux"],
+  [SiChakraui, "Chakra UI"],
+  [RiOpenaiFill, "OpenAI"],
+  [SiPython, "Python"],
+  [SiMui, "Material UI"],
+  [SiGoogle, "Google"],
+]);
 
-//trip to heaven images
-import tripToHeaven_Image1 from "../../assets/tripToHeaven (1).png";
-import tripToHeaven_Image2 from "../../assets/tripToHeaven (2).png";
-import tripToHeaven_Image3 from "../../assets/tripToHeaven (3).png";
-import tripToHeaven_Image4 from "../../assets/tripToHeaven (4).png";
-import tripToHeaven_Image5 from "../../assets/tripToHeaven (5).png";
-
-//skincare images
-
-import skinCare_Image1 from "../../assets/skinCare (1).png";
-import skinCare_Image2 from "../../assets/skinCare (2).png";
-import skinCare_Image3 from "../../assets/skinCare (3).png";
-import skinCare_Image4 from "../../assets/skinCare (4).png";
-import skinCare_Image5 from "../../assets/skinCare (5).png";
-
-//Flawless Images
-
-import flawless_Image1 from "../../assets/flawless_Image (1).png";
-import flawless_Image2 from "../../assets/flawless_Image (2).png";
-import flawless_Image3 from "../../assets/flawless_Image (3).png";
-import flawless_Image4 from "../../assets/flawless_Image (4).png";
-import flawless_Image5 from "../../assets/flawless_Image (5).png";
-
-//sparkAmerica
-import sparkAmerica_Image1 from "../../assets/sparkAmerica (1).png";
-import sparkAmerica_Image2 from "../../assets/sparkAmerica (2).png";
-import sparkAmerica_Image3 from "../../assets/sparkAmerica (3).png";
-import sparkAmerica_Image4 from "../../assets/sparkAmerica (4).png";
-import sparkAmerica_Image5 from "../../assets/sparkAmerica (5).png";
-
-//EnterPrise Notion
-import enterpriseNotion_Image1 from "../../assets/enterprise-notion-1.png";
-import enterpriseNotion_Image2 from "../../assets/enterprise-notion-2.png";
-import enterpriseNotion_Image3 from "../../assets/enterprise-notion-3.png";
-import enterpriseNotion_Image4 from "../../assets/enterprise-notion-4.png";
-import enterpriseNotion_Image5 from "../../assets/enterprise-notion-5.png";
-
-// Career Explorer
-import careerExplorer_Image1 from "../../assets/career-explorer-1.png";
-import careerExplorer_Image2 from "../../assets/career-explorer-2.png";
-import careerExplorer_Image3 from "../../assets/career-explorer-3.png";
-import careerExplorer_Image4 from "../../assets/career-explorer-4.png";
-import careerExplorer_Image5 from "../../assets/career-explorer-5.png";
-
-let ProjectsDetails = [
+const ProjectsDetails = [
   {
     name: "Career Explorer",
     description:
@@ -90,7 +87,7 @@ let ProjectsDetails = [
       SiNodedotjs,
       SiMongodb,
       SiMui,
-      SiOpenai,
+      RiOpenaiFill,
       SiPython,
     ],
     githubLink: "https://github.com/shivammchaudhary1/career_explorer",
@@ -179,14 +176,22 @@ let ProjectsDetails = [
 const Projects = () => {
   return (
     <div className="project_container" id="projects">
-      <h1>Projects</h1>
+      <h2>Projects</h2>
+      <CompanyProjects />
+      <div className="existing-projects-header" id="existing-projects">
+        <h3>More projects</h3>
+      </div>
       <div className="project_sub-container">
         {ProjectsDetails.map((e) => (
           <Project
+            key={e.githubLink}
             name={e.name}
             description={e.description}
             images={e.images}
-            skills={e.skills}
+            skills={e.skills.map((icon) => ({
+              icon,
+              label: technologyNames.get(icon),
+            }))}
             githubLink={e.githubLink}
             liveLink={e.liveLink}
           />

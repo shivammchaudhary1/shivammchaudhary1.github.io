@@ -1,186 +1,78 @@
 .header-container {
-  /* border: 1px solid white; */
-  width: 75%;
-  margin: auto;
+  position: relative;
+  width: min(1120px, calc(100% - 3rem));
+  margin: 7rem auto 0;
   text-align: center;
-  margin-top: 6rem;
 }
-
 .header-hello {
-  font-size: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
 }
-
 .header-name {
-  font-size: 40px;
-  margin-top: -1.5rem;
+  margin-bottom: 0.8rem;
 }
-
 .header-designation {
-  font-size: 25px;
-  margin-top: -1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-weight: 600;
 }
-
 .header-button-container {
-  /* border: 1px solid white; */
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 }
-
-.primary-button-one {
-  height: 50px;
-  width: 150px;
-  background-color: #4db5ff;
-  color: #2c2c6c;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.primary-button-one:hover {
-  color: #fff;
-  border: 2px solid white;
-  background-color: transparent;
-  transition: all 400ms ease;
-}
-
-.primary-button-two {
-  height: 50px;
-  width: 150px;
-  background-color: transparent;
-  border-radius: 0.5rem;
-  color: #fff;
-  border: 2px solid white;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.primary-button-two:hover {
-  background-color: #4db5ff;
-  color: #2c2c6c;
-  transition: all 400ms ease;
-}
-
 .social-links-container {
-  /* border: 1px solid white; */
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+}
+.header-container > .social-links-container {
   position: absolute;
-  top: 25rem;
-  bottom: 3rem;
+  left: 0;
+  top: 55%;
+  flex-direction: column;
 }
-
-.social-links-container > a {
-  color: #4db5ff;
+.social-links-container a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.social-links-container > a:hover {
-  color: white;
+.social-links-container a:hover {
+  color: #fff;
 }
-
 .home-img {
-  background: #052232;
   width: 22rem;
-  left: calc(50% - 11rem);
-  margin-top: 4rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 3rem auto 0;
   border-radius: 2rem;
 }
-
-/* Media Queries */
-
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .header-container {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    margin-top: 6rem;
+    width: calc(100% - 2rem);
+    margin-top: 6.5rem;
   }
-
+  .header-container > .social-links-container {
+    position: static;
+    flex-direction: row;
+    margin-top: 1.4rem;
+  }
+  .home-img {
+    width: min(18rem, 100%);
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 380px) {
   .header-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 0.65rem;
   }
-
-  .social-links-container {
-    border: 0px solid white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-/* Small Screen  */
-@media screen and (min-width: 320px) and (max-width: 650px) {
-  .header-name {
-    font-size: 30px; /* Adjust the font size for small screens */
-    line-height: 120%;
-  }
-
-  .header-designation {
-    font-size: 20px; /* Adjust the font size for small screens */
-  }
-
-  .header-hello {
-    font-size: 15px; /* Adjust the font size for small screens */
-  }
-
-  .home-img {
-    width: 16rem; /* Adjust the image width for small screens */
-    margin-top: 1rem; /* Adjust the margin-top for small screens */
-    /* box-shadow: rgba(247, 242, 242, 0.1) 0px 1px 2px 0px; */
-    box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
-      rgba(250, 250, 250, 0.3) 0px 1px 3px -1px;
-  }
-
-  .social-links-container {
-    /* border: 1px solid white; */
-    top: 21rem;
-
-    display: flex;
-    flex-direction: row; /* Display social links horizontally */
-    justify-content: center; /* Center the social links horizontally */
-    align-items: center; /* Center the social links vertically */
-    position: relative;
-    bottom: 1rem; /* Adjust the bottom position */
-  }
-
-  .social-links-container > a {
-    margin: 0 0.5rem; /* Adjust the margin between social links */
-  }
-}
-
-/* Tablet  */
-@media screen and (min-width: 651px) and (max-width: 1024px) {
-  /* Update styles for tablet here */
-  .home-img {
-    width: 18rem; /* Adjust the image width for medium screens */
-    margin-top: 4rem; /* Adjust the margin-top for medium screens */
-  }
-
-  .social-links-container {
-    flex-direction: row; /* Display social links horizontally */
-    top: unset; /* Remove the top position */
-    bottom: 5rem; /* Adjust the bottom position */
-    box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
-      rgba(250, 250, 250, 0.3) 0px 1px 3px -1px;
-  }
-
-  .social-links-container > a {
-    margin: 0 0.5rem; /* Adjust the margin between social links */
-  }
-
-  .header-container {
-    width: 90%;
+  .header-button-container a {
+    min-width: 0;
+    flex: 1;
+    padding-inline: 0.65rem;
   }
 }

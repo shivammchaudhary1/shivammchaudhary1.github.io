@@ -1,0 +1,111 @@
+.gallery-expand {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.4rem;
+  background: rgba(3, 20, 30, 0.88);
+  color: #fff;
+  font-size: 0.8rem;
+}
+.gallery-expand:hover {
+  background: #17445e;
+}
+.gallery-caption {
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+.screenshot-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(1150px, calc(100% - 2rem));
+  max-height: 94dvh;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #6395b6;
+  border-radius: 1rem;
+  color: #fff;
+  background: #061c29;
+}
+.screenshot-dialog::backdrop {
+  background: rgba(0, 8, 14, 0.88);
+}
+.screenshot-dialog-content {
+  min-width: 0;
+}
+.screenshot-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.screenshot-dialog-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  text-align: left;
+}
+.screenshot-dialog-close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #6395b6;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: transparent;
+  font-size: 1.5rem;
+}
+.screenshot-dialog-image {
+  max-width: 100%;
+  max-height: calc(94dvh - 10rem);
+  width: auto;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+.screenshot-dialog-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.screenshot-dialog-footer div {
+  display: flex;
+  gap: 0.5rem;
+}
+.screenshot-dialog-footer button {
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #6395b6;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: transparent;
+}
+.screenshot-dialog button:hover {
+  background: #17445e;
+}
+@media (max-width: 500px) {
+  .gallery-expand span {
+    display: none;
+  }
+  .gallery-expand {
+    min-width: 44px;
+  }
+  .screenshot-dialog {
+    width: calc(100% - 1rem);
+    padding: 0.75rem;
+  }
+}

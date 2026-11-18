@@ -1,48 +1,40 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ProjectGallery from "../shared/ProjectGallery";
 
 const Project = (props) => {
   const { name, description, images, skills, githubLink, liveLink } = props;
-
   return (
-    <div className="singleProject project-card">
-      <Carousel>
-        {images.map((image, index) => (
-          <div key={index} className="img">
-            <img src={image} alt={`Image ${index}`} />
-          </div>
-        ))}
-      </Carousel>
-      <h3 class="project-title">{name}</h3>
+    <article className="singleProject project-card">
+      <ProjectGallery name={name} images={images} />
+      <h4 className="project-title">{name}</h4>
       <p className="discription_p project-description">{description}</p>
       <div className="tech_used project-tech-stack">
         {/* Tech Stacks: */}
-        {skills.map((SkillIcon, index) => (
-          <div key={index} className="skill_icon">
-            <SkillIcon size="30" />
+        {skills.map(({ icon: SkillIcon, label }) => (
+          <div key={label} className="skill_icon" title={label}>
+            <SkillIcon size="30" aria-hidden="true" />
+            <span className="sr-only">{label}</span>
           </div>
         ))}
       </div>
       <div className="project_button_card">
         <a
-          className="project-deployed-link"
+          className="project-deployed-link live_button"
           href={liveLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="live_button">Live</button>
+          Live
         </a>
         <a
-          className="project-github-link"
+          className="project-github-link github_button"
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="github_button">Github</button>
+          Github
         </a>
       </div>
-    </div>
+    </article>
   );
 };
 

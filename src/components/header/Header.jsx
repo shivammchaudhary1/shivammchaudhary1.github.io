@@ -1,48 +1,28 @@
-// import React from "react";
-// import "./Header.css";
-// import HeaderButton from "./HeaderButton";
-// import SocialLink from "./SocialLink";
-// import ProfileImage from "../../assets/Shivam_Chaudhary.jpg";
-
-// const Header = () => {
-//   return (
-//     <div className="header_container">
-//       <h3 id="hello">Hello, I'm</h3>
-//       <h1 id="intro_name">Shivam Kumar Chaudhary</h1>
-//       <h4 id="intro_designation">Full Stack Developer</h4>
-//       <HeaderButton />
-//       <SocialLink />
-//       <div>
-//         <img
-//           className="header_profile_image"
-//           src={ProfileImage}
-//           alt="Shivam Chaudhary"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;
-
-import React from "react";
 import "./header.css";
 import HeaderButton from "./HeaderButton";
 import SocialLink from "./SocialLink";
-import ProfileImage from "../../assets/Shivam_Chaudhary.jpg";
+import ProfileImage from "../../assets/Shivam_Chaudhary.webp";
 
 const Header = () => {
   return (
     <div className="header-container" id="home">
-      <h3 className="header-hello">Hello, I'm</h3>
+      <p className="header-hello">Hello, I'm</p>
       <h1 className="header-name" id="user-detail-name">
         Shivam Kumar Chaudhary
       </h1>
-      <h4 className="header-designation">Full Stack Developer</h4>
+      <p className="header-designation">Full Stack Developer</p>
       <HeaderButton />
-      <SocialLink />
+      <SocialLink withIds />
       <div>
-        <img className="home-img" src={ProfileImage} alt="Shivam Chaudhary" />
+        <img
+          className="home-img"
+          width="510"
+          height="510"
+          fetchPriority="high"
+          decoding="async"
+          src={ProfileImage}
+          alt="Shivam Chaudhary"
+        />
       </div>
     </div>
   );
