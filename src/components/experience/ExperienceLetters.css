@@ -1,0 +1,117 @@
+.experience-container {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 5rem auto;
+}
+.experience-container h2 { margin-bottom: 1rem; }
+.experience-intro {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.experience-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(77, 181, 255, 0.25);
+  border-radius: 1rem;
+  background: rgba(5, 34, 50, 0.94);
+}
+.experience-card:target {
+  border-color: var(--accent);
+}
+.experience-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.experience-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 0.65rem;
+  color: #c7e8ff;
+  background: var(--surface);
+}
+.experience-role, .experience-tenure, .experience-issued {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.experience-role { margin-top: 0.25rem; }
+.experience-card .project-cover { background: #fff; }
+.experience-letter-type { color: var(--accent); font-size: 0.85rem; }
+.experience-summary { color: #e1eaf0; font-size: 0.95rem; }
+.experience-issued { margin-top: auto; }
+.experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(77, 181, 255, 0.2);
+}
+.experience-actions a, .company-experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.experience-actions a:hover, .company-experience-link:hover { text-decoration: underline; }
+.experience-document-viewer {
+  width: min(1050px, calc(100% - 2rem));
+  padding-top: 0;
+}
+.experience-document-viewer .screenshot-dialog-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.75rem 0;
+  background: #061c29;
+}
+.experience-document-viewer .screenshot-dialog-header h2 { flex: 1; }
+.experience-document-viewer .document-zoom-toggle {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #6395b6;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: #061c29;
+  font-size: 0.8rem;
+}
+.experience-document-viewer.is-zoomed .screenshot-dialog-image { max-width: none; }
+.experience-document-viewer .screenshot-dialog-image {
+  width: 100%;
+  max-height: none;
+  height: auto;
+  background: #fff;
+}
+@media (max-width: 1000px) {
+  .experience-grid { grid-template-columns: minmax(0, 1fr); }
+  .experience-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    column-gap: 1.75rem;
+    align-content: start;
+  }
+  .experience-card .project-gallery {
+    grid-column: 1;
+    grid-row: 1 / span 7;
+  }
+  .experience-card > :not(.project-gallery) { grid-column: 2; }
+}
+@media (max-width: 600px) {
+  .experience-container { width: calc(100% - 2rem); margin-block: 3rem; }
+  .experience-card { display: flex; padding: 1rem; }
+}

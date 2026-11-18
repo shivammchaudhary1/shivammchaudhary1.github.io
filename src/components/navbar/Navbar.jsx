@@ -1,63 +1,92 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
-import Resume from "../../assets/Shivam_Chaudhary_Resume.pdf";
+import ResumeLink from "../shared/ResumeLink";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const downloadPDF = () => {
-    const link = document.createElement("a");
-    link.href = Resume;
-    link.download = "Shivam_Chaudhary_Resume.pdf";
-    link.click();
-  };
+  const menuButton = useRef(null);
+  const navigation = useRef(null);
+  const closeMenu = () => setIsMenuOpen(false);
 
-  const openPDFInNewTab = (event) => {
-    event.preventDefault();
-    window.open(Resume, "_blank");
-    downloadPDF();
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleKey = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    const handleOutsideClick = (event) => {
+      if (!navigation.current?.contains(event.target)) setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", handleKey);
+    document.addEventListener("pointerdown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.removeEventListener("pointerdown", handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
   return (
-    <div className={`navbar_container ${isMenuOpen ? "menu-open" : ""}`}>
-      <div className="navbar_container_logo">SKC</div>
+    <nav
+      ref={navigation}
+      aria-label="Main navigation"
+      className={`navbar_container ${isMenuOpen ? "menu-open" : ""}`}
+    >
+      <a
+        href="#home"
+        className="navbar_container_logo"
+        aria-label="Shivam Chaudhary home"
+        onClick={closeMenu}
+      >
+        SKC
+      </a>
       <div
         id="nav-menu"
         className={`navbar_container_navItems ${isMenuOpen ? "menu-open" : ""}`}
+        onClick={closeMenu}
       >
-        <a href="#" class="nav-link home">
+        <a href="#home" className="nav-link home">
           HOME
         </a>
-        <a href="#about" class="nav-link about">
+        <a href="#about" className="nav-link about">
           ABOUT
         </a>
-        <a href="#skills" class="nav-link skills">
+        <a href="#skills" className="nav-link skills">
           SKILLS
         </a>
-        <a href="#projects" class="nav-link projects">
+        <a href="#projects" className="nav-link projects">
           PROJECTS
         </a>
+        <a href="#experience" className="nav-link experience">
+          EXPERIENCE
+        </a>
+        <a href="#certifications" className="nav-link certifications">
+          CERTIFICATIONS
+        </a>
         <a href="#github">GITHUB</a>
-        <a href="#contact" class="nav-link contact">
+        <a href="#contact" className="nav-link contact">
           CONTACT
         </a>
-        <a onClick={openPDFInNewTab} class="nav-link resume">
-          RESUME
-        </a>
+        <ResumeLink className="nav-link resume">RESUME</ResumeLink>
       </div>
-      <div
+      <button
+        type="button"
+        ref={menuButton}
+        aria-label={
+          isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+        }
+        aria-expanded={isMenuOpen}
+        aria-controls="nav-menu"
         className={`navbar_hamburger ${isMenuOpen ? "menu-open" : ""}`}
-        onClick={toggleMenu}
+        onClick={() => setIsMenuOpen((open) => !open)}
       >
-        <div className="navbar_hamburger_line"></div>
-        <div className="navbar_hamburger_line"></div>
-        <div className="navbar_hamburger_line"></div>
-      </div>
-    </div>
+        <span className="navbar_hamburger_line" aria-hidden="true"></span>
+        <span className="navbar_hamburger_line" aria-hidden="true"></span>
+        <span className="navbar_hamburger_line" aria-hidden="true"></span>
+      </button>
+    </nav>
   );
 };
 

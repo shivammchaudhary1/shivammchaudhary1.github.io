@@ -1,144 +1,88 @@
-/* navbar.css */
 .navbar_container {
-  top: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  display: block;
-  padding: 0.7rem 3.7rem;
-  z-index: 2;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0 0 auto;
+  z-index: 10;
+  min-height: 64px;
+  padding: 0.75rem max(1.25rem, calc((100vw - 1160px) / 2));
   display: flex;
-  gap: 2.8rem;
-  backdrop-filter: blur(15px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: rgba(3, 20, 30, 0.94);
+  border-bottom: 1px solid rgba(77, 181, 255, 0.12);
 }
-
 .navbar_container_logo {
-  width: 25%;
-  font-size: 24px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d6e2ea;
+  line-height: 1.4;
 }
-
-.navbar_container_logo:hover {
-  cursor: pointer;
-}
-
 .navbar_container_navItems {
-  width: 75%;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(1rem, 1.8vw, 1.6rem);
 }
-
 .navbar_container_navItems a {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 16px;
-  transition: color 0.3s ease-in-out;
+  color: #c5d1d9;
+  font-size: 0.9rem;
+  transition: color 180ms ease;
 }
-
 .navbar_container_navItems a:hover {
-  color: #4db5ff;
+  color: var(--accent);
 }
-
-.navbar_container_navItems a:not(:last-child) {
-  margin-right: 20px;
+.navbar_hamburger {
+  display: none;
+  border: 0;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
 }
-
-.navbar_container_navItems a:not(:last-child)::after {
-  content: "";
+.navbar_hamburger_line {
   display: block;
-  width: 0;
-  height: 2px;
-  background-color: #4db5ff;
-  transition: width 0.3s ease-in-out;
-}
-
-.navbar_container_navItems a:hover::after {
   width: 100%;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
-
-/* Media Queries */
-
-/* mobile screen  */
-
-/* @media (max-width: 768px) { */
-@media screen and (min-width: 320px) and (max-width: 650px) {
+@media (max-width: 1000px) {
+  .navbar_hamburger {
+    display: block;
+  }
   .navbar_container_navItems {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    right: 0;
+    padding: 1rem 1.25rem;
+    background: #061c29;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    border-bottom: 1px solid #315367;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
   }
-
   .navbar_container.menu-open .navbar_container_navItems {
     display: flex;
-    opacity: 1;
   }
-
   .navbar_container_navItems a {
-    margin: 10px 0;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem;
   }
-
-  .navbar_hamburger {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    z-index: 3;
-  }
-
-  .navbar_hamburger_line {
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: transform 0.3s ease-in-out;
-  }
-
   .navbar_hamburger.menu-open .navbar_hamburger_line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(8px) rotate(45deg);
   }
-
   .navbar_hamburger.menu-open .navbar_hamburger_line:nth-child(2) {
     opacity: 0;
   }
-
   .navbar_hamburger.menu-open .navbar_hamburger_line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
-
-/* Tablet  */
-
-@media screen and (min-width: 651px) and (max-width: 1024px) {
-  .navbar_container_logo {
-    width: 25%;
-  }
-
-  .navbar_container_navItems {
-    width: 65%;
-    justify-content: space-around;
-  }
-
-  .navbar_container_navItems a {
-    margin-left: 5px;
-  }
-}
-
-/* @media screen and (min-width: 320px) and (max-width: 650px) {
-  @media screen and (min-width: 651px) and (max-width: 1024px) { */

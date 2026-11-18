@@ -1,50 +1,38 @@
 {
-  "homepage": "https://shivammchaudhary1.github.io",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "homepage": "https://shivammchaudhary1.github.io",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "framer-motion": "^10.12.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-github-calendar": "^4.0.0",
-    "react-icons": "^4.8.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "5.0.1",
-    "react-scroll": "^1.8.9",
-    "web-vitals": "^2.1.4"
+    "@emailjs/browser": "^5.0.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-github-calendar": "^5.0.9",
+    "react-icons": "^5.7.0"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "vite --host 127.0.0.1 --port 3000",
+    "dev": "vite --host 127.0.0.1 --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.3",
+    "@vitejs/plugin-react": "^6.3.0",
+    "gh-pages": "^6.3.0",
+    "jsdom": "^31.0.1",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
   }
 }
